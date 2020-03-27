@@ -1,0 +1,39 @@
+Fish locations:
+0 = pier
+1 = pond
+2 = river
+3 = clifftop
+4 = river mouth
+5 = sea
+6 = coelacanth(rainy day sea)
+
+Fish shadows:
+0 = xs
+1 = s
+2 = m
+3 = l
+4 = xl
+5 = xxl
+6 = xxl w/ fin
+7 = skinny bois
+
+Bug locations:
+0 = beach
+1 = shake trees
+2 = flying
+3 = moth(flying by light)
+4 = hit rock
+5 = walkingleaf(near tree, looks like leaf)
+6 = on flowers
+7 = on ground 
+8 = snail(on rocks in rain)
+9 = wharf roach(beach rocks)
+10 = ant(rotten food)
+11 = fly(on trash)
+12 = tree stumps
+13 = on trees
+14 = on villager(flea)
+15 = orchid mantis(on white flower)
+16 = pondskater
+17 = ponds and rivers
+18 = underground
