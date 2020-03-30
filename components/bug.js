@@ -9,7 +9,10 @@ Vue.component("bug", {
     }
   },
   template: `<div>
-        <h4>{{ bug.Bug }}</h4>
-        <span class=""
+        <h4>{{ northern.bug.Bug }}</h4>
+        <span class="location">{{ northern.bug.Location }}</span>
+        <span class="availability-time">{{ northern.bug.StartTime }} - {{ northern.bug.EndTime }}</span>
+        <span class="availability-date">{{ something goes here for computed availability data? }}</span>
+        <span class="value">{{ northern.bug.Value }}</span>
     </div>`
 });
