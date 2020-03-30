@@ -6370,11 +6370,3 @@ southern = {
     }
   ]
 };
-
-var vm = new Vue({
-  el: "#app",
-  data: {
-    northern: northern,
-    southern: southern
-  }
-});
