@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="js/vue.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <select v-model="selectedHemisphere">
-        <option selected>Northern</option>
-        <option>Southern</option>
-      </select>
 
-      <div v-for="bug in northern.bugs" v-if="selectedHemisphere == 'Northern'">
-        <bug :bug="bug"></bug>
-      </div>
-      <div v-for="bug in southern.bugs" v-if="selectedHemisphere == 'Southern'">
-        <bug :bug="bug"></bug>
-      </div>
-      <div
-        v-for="fish in northern.fish"
-        v-if="selectedHemisphere == 'Northern'"
-      >
-        <fish :fish="fish"></fish>
-      </div>
-      <div
-        v-for="fish in southern.fish"
-        v-if="selectedHemisphere == 'Southern'"
-      >
-        <fish :fish="fish"></fish>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <select v-model="selectedHemisphere">
+      <option selected>Northern</option>
+      <option>Southern</option>
+    </select>
+
+    <div v-for="bug in northern.bugs" v-if="selectedHemisphere == 'Northern'">
+      <bug :bug="bug"></bug>
     </div>
-    <script src="components/bug.js"></script>
-    <script src="components/fish.js"></script>
+    <div v-for="bug in southern.bugs" v-if="selectedHemisphere == 'Southern'">
+      <bug :bug="bug"></bug>
+    </div>
+    <div v-for="fish in northern.fish" v-if="selectedHemisphere == 'Northern'">
+      <fish :fish="fish"></fish>
+    </div>
+    <div v-for="fish in southern.fish" v-if="selectedHemisphere == 'Southern'">
+      <fish :fish="fish"></fish>
+    </div>
+  </div>
+  <script src="components/bug.js"></script>
+  <script src="components/fish.js"></script>
 
-    <script src="js/data.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

@@ -3,7 +3,14 @@ Vue.component("fish", {
   data: function() {
     return {};
   },
-  template: `<div>
+  computed: {
+    showIfCurrentMonth: function () {
+      theDate = new Date()
+      return this.fish.Months[theDate.getMonth()]
+    }
+  },
+
+  template: `<div v-if="showIfCurrentMonth">
         <h4>{{ fish.Fish }}</h4>
         <span class="location">{{ fish.Location }}</span>
         <span class="fish-shadow">{{ fish.ShadowType }}</span>
