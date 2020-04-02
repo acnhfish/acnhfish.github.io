@@ -25,16 +25,21 @@
       <option v-for="(month, index) in months" :value="index">{{ month }}</option>
     </select>
     Change time:
+    <br />
+    <span>Fish:</span>
+    <input type="checkbox" id="fishChecked" v-model="fishChecked">
+    <span>Bugs:</span>
+    <input type="checkbox" id="bugsChecked" v-model="bugsChecked">
     <br />Search:
     <input v-model="search" />
 
     <div class="bugsandfish">
-      <div class="bugs">
+      <div class="bugs" v-if="bugsChecked">
         <bug v-for="bug in bugs" v-bind:key="bug.Bug" :bug="bug" :months="months" :current-Month="currentMonth"
           :hemisphere="selectedHemisphere" :search="formatSearch">
         </bug>
       </div>
-      <div class="fish">
+      <div class="fish" v-if="fishChecked">
         <fish v-for="fish in fishes" v-bind:key="fish.Fish" :fish="fish" :months="months" :current-Month="currentMonth"
           :hemisphere="selectedHemisphere" :search="formatSearch">
         </fish>

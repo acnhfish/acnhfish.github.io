@@ -1573,7 +1573,9 @@ var vm = new Vue({
     search: "",
     months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     currentMonth: month,
-    currentHour: hour
+    currentHour: hour,
+    bugsChecked: true,
+    fishChecked: true
 
   },
   computed: {
