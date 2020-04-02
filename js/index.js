@@ -2785,13 +2785,19 @@ southern = {
   ]
 };
 
+date = new Date()
+date = date.getMonth()
+
 var vm = new Vue({
   el: "#app",
   data: {
     northern: northern,
     southern: southern,
     selectedHemisphere: "Northern",
-    search: ""
+    search: "",
+    months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    currentMonth: date
+
   },
   computed: {
     formatSearch: function () {

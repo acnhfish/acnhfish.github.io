@@ -1,18 +1,20 @@
 Vue.component("bug", {
-  props: ["bug"],
+  props: {
+    bug: Object,
+    months: Array,
+    currentMonth: Number
+  },
   data: function() {
     return {};
   },
   methods: {
     formatMonth: function (index) {
-      months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-      return months[index]
+      return this.months[index]
     }
   },
   computed: {
     showIfCurrentMonth: function () {
-      theDate = new Date()
-      return this.bug.Months[theDate.getMonth()]
+      return this.bug.Months[this.currentMonth]
     },
     showIfCurrentTime: function () {
       theTime = new Date()
