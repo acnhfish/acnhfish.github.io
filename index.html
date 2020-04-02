@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css">
   <title>Document</title>
   <script src="js/vue.js"></script>
 </head>
@@ -14,18 +15,24 @@
       <option selected>Northern</option>
       <option>Southern</option>
     </select>
+    <input v-model="search">
 
-    <div v-for="bug in northern.bugs" v-if="selectedHemisphere == 'Northern'">
-      <bug :bug="bug"></bug>
-    </div>
-    <div v-for="bug in southern.bugs" v-if="selectedHemisphere == 'Southern'">
-      <bug :bug="bug"></bug>
-    </div>
-    <div v-for="fish in northern.fish" v-if="selectedHemisphere == 'Northern'">
-      <fish :fish="fish"></fish>
-    </div>
-    <div v-for="fish in southern.fish" v-if="selectedHemisphere == 'Southern'">
-      <fish :fish="fish"></fish>
+    <div class="bugsandfish">
+      <div class="bugs">
+        <bug v-for="bug in northern.bugs"
+          v-if="(selectedHemisphere == 'Northern') && bug.Bug.toLowerCase().includes(formatSearch)" :bug="bug">
+        </bug>
+        <bug v-for="bug in southern.bugs"
+          v-if="(selectedHemisphere == 'Southern') && bug.Bug.toLowerCase().includes(formatSearch)" :bug="bug"></bug>
+      </div>
+      <div class="fish">
+        <fish v-for="fish in northern.fish"
+          v-if="(selectedHemisphere == 'Northern') && fish.Fish.toLowerCase().includes(formatSearch)" :fish="fish">
+        </fish>
+        <fish v-for="fish in southern.fish"
+          v-if="(selectedHemisphere == 'Southern') && fish.Fish.toLowerCase().includes(formatSearch)" :fish="fish">
+        </fish>
+      </div>
     </div>
   </div>
   <script src="components/bug.js"></script>

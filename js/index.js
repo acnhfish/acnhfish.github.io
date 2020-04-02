@@ -2790,6 +2790,12 @@ var vm = new Vue({
   data: {
     northern: northern,
     southern: southern,
-    selectedHemisphere: "Northern"
+    selectedHemisphere: "Northern",
+    search: ""
+  },
+  computed: {
+    formatSearch: function () {
+      return this.search.toLowerCase()
+    }
   }
 });

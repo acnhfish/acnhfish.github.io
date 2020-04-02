@@ -1,0 +1,56 @@
+#app {
+    margin: auto;
+}
+
+.bugs {
+    /*
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    */
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.fish {
+    /*
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    */
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.critter {
+    display: inline-block;
+    border: 2px solid black;
+    width: 180px;
+    padding: 10px;
+    margin:10px;
+    border-radius: 5px;
+}
+.datebox {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    text-align: center;
+    border: 2px solid black;
+    width: 160px;
+    border-radius: 5px;
+}
+
+.datebox > span {
+    border: 1px solid black;
+}
+
+.availability-date {
+    background: lightcoral;
+    padding: 5px;
+}
+
+.available {
+    background: lightgreen;
+}
+
+.availability-time {
+    display: flex;
+}
+
