@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>ACNH Bugs and Fish</title>
+    <script src="js/vue.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Document</title>
-  <script src="js/vue.js"></script>
-</head>
+  <body>
+    <div id="app">
+      <h1>WIP Bugs and fish viewer</h1>
+      Currently shows what bugs and fish are available locally to you, right
+      now<br />
+      <select v-model="selectedHemisphere">
+        <option selected>Northern</option>
+        <option>Southern</option>
+      </select>
+      <input v-model="search" />
 
-<body>
-  <div id="app">
-    <select v-model="selectedHemisphere">
-      <option selected>Northern</option>
-      <option>Southern</option>
-    </select>
-    <input v-model="search">
-
-    <div class="bugsandfish">
-      <div class="bugs">
-        <bug v-for="bug in northern.bugs"
-          v-if="(selectedHemisphere == 'Northern') && bug.Bug.toLowerCase().includes(formatSearch)" :bug="bug">
-        </bug>
-        <bug v-for="bug in southern.bugs"
-          v-if="(selectedHemisphere == 'Southern') && bug.Bug.toLowerCase().includes(formatSearch)" :bug="bug"></bug>
-      </div>
-      <div class="fish">
-        <fish v-for="fish in northern.fish"
-          v-if="(selectedHemisphere == 'Northern') && fish.Fish.toLowerCase().includes(formatSearch)" :fish="fish">
-        </fish>
-        <fish v-for="fish in southern.fish"
-          v-if="(selectedHemisphere == 'Southern') && fish.Fish.toLowerCase().includes(formatSearch)" :fish="fish">
-        </fish>
+      <div class="bugsandfish">
+        <div class="bugs">
+          <bug
+            v-for="bug in northern.bugs"
+            v-if="(selectedHemisphere == 'Northern') && bug.Bug.toLowerCase().includes(formatSearch)"
+            :bug="bug"
+          >
+          </bug>
+          <bug
+            v-for="bug in southern.bugs"
+            v-if="(selectedHemisphere == 'Southern') && bug.Bug.toLowerCase().includes(formatSearch)"
+            :bug="bug"
+          ></bug>
+        </div>
+        <div class="fish">
+          <fish
+            v-for="fish in northern.fish"
+            v-if="(selectedHemisphere == 'Northern') && fish.Fish.toLowerCase().includes(formatSearch)"
+            :fish="fish"
+          >
+          </fish>
+          <fish
+            v-for="fish in southern.fish"
+            v-if="(selectedHemisphere == 'Southern') && fish.Fish.toLowerCase().includes(formatSearch)"
+            :fish="fish"
+          >
+          </fish>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="components/bug.js"></script>
-  <script src="components/fish.js"></script>
+    <script src="components/bug.js"></script>
+    <script src="components/fish.js"></script>
 
-  <script src="js/index.js"></script>
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>
