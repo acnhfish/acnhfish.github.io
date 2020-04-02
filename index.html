@@ -15,36 +15,28 @@
     Currently shows what bugs and fish are available locally to you, right
     now<br />
     Hemisphere:
-    <select v-model="selectedHemisphere">
-      <option selected>Northern</option>
-      <option>Southern</option>
+    <select v-model.number="selectedHemisphere">
+      <option selected value="0">Northern</option>
+      <option value="1">Southern</option>
     </select>
     <br />
-    Month:
-    <select class="monthpicker" v-model="currentMonth">
+    Change month:
+    <select class="picker" v-model="currentMonth">
       <option v-for="(month, index) in months" :value="index">{{ month }}</option>
     </select>
+    Change time:
     <br />Search:
     <input v-model="search" />
 
     <div class="bugsandfish">
       <div class="bugs">
-        <bug v-for="bug in northern.bugs"
-          v-if="(selectedHemisphere == 'Northern') && bug.Bug.toLowerCase().includes(formatSearch)" :bug="bug"
-          :months="months" :current-Month="currentMonth">
+        <bug v-for="bug in bugs" v-bind:key="bug.Bug" :bug="bug" :months="months" :current-Month="currentMonth"
+          :hemisphere="selectedHemisphere" :search="formatSearch">
         </bug>
-        <bug v-for="bug in southern.bugs"
-          v-if="(selectedHemisphere == 'Southern') && bug.Bug.toLowerCase().includes(formatSearch)" :bug="bug"
-          :months="months" :current-Month="currentMonth"></bug>
       </div>
       <div class="fish">
-        <fish v-for="fish in northern.fish"
-          v-if="(selectedHemisphere == 'Northern') && fish.Fish.toLowerCase().includes(formatSearch)" :fish="fish"
-          :months="months" :current-Month="currentMonth">
-        </fish>
-        <fish v-for="fish in southern.fish"
-          v-if="(selectedHemisphere == 'Southern') && fish.Fish.toLowerCase().includes(formatSearch)" :fish="fish"
-          :months="months" :current-Month="currentMonth">
+        <fish v-for="fish in fishes" v-bind:key="fish.Fish" :fish="fish" :months="months" :current-Month="currentMonth"
+          :hemisphere="selectedHemisphere" :search="formatSearch">
         </fish>
       </div>
     </div>

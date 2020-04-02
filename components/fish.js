@@ -2,7 +2,10 @@ Vue.component("fish", {
   props: {
     fish: Object,
     months: Array,
-    currentMonth: Number
+    currentMonth: Number,
+    currentTime: Number,
+    hemisphere: Number,
+    search: String
   },
   data: function() {
     return {};
@@ -14,7 +17,11 @@ Vue.component("fish", {
   },
   computed: {
     showIfCurrentMonth: function () {
-      return this.fish.Months[this.currentMonth]
+      if (this.hemisphere) {
+        return this.fish.SouthMonths[this.currentMonth]
+      } else {
+        return this.fish.NorthMonths[this.currentMonth]
+      }
     },
     showIfCurrentTime: function () {
       theTime = new Date()
@@ -28,6 +35,9 @@ Vue.component("fish", {
         return true
       }
       return (currentTime >= startTime && currentTime < this.fish.EndTime)
+    },
+    showIfSearch: function () {
+      return this.bug.Bug.toLowerCase().includes(this.search)
     },
     shadowType: function () {
       switch (this.fish.ShadowType) {
@@ -69,14 +79,17 @@ Vue.component("fish", {
     }
   },
 
-  template: `<div class="critter" v-if="showIfCurrentMonth && showIfCurrentTime">
+  template: `<div class="critter" v-if="showIfCurrentMonth && showIfCurrentTime && fish.Fish.toLowerCase().includes(this.search)">
         <h4>{{ fish.Fish }}</h4>
         <span class="location">{{ location }}</span>
         <span class="fish-shadow">{{ shadowType }} </span>
         <span class="availability-time" v-if="fish.StartTime != 0">{{ fish.StartTime }}&#58;00-{{ fish.EndTime }}&#58;00</span>
         <span class="availability-time" v-else>Any time</span>
-        <div class="datebox">
-        <span class="availability-date" v-for="(month, index) in fish.Months" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
+        <div class="datebox" v-if="hemisphere == 0">
+        <span class="availability-date" v-for="(month, index) in fish.NorthMonths" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
+        </div>
+        <div class="datebox" v-else>
+        <span class="availability-date" v-for="(month, index) in fish.SouthMonths" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
         </div>
         <span class="value">Bells: {{ fish.Value }}</span>
         </div>`

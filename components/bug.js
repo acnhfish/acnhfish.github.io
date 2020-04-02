@@ -2,7 +2,10 @@ Vue.component("bug", {
   props: {
     bug: Object,
     months: Array,
-    currentMonth: Number
+    currentMonth: Number,
+    currentTime: Number,
+    hemisphere: Number,
+    search: String
   },
   data: function() {
     return {};
@@ -14,7 +17,11 @@ Vue.component("bug", {
   },
   computed: {
     showIfCurrentMonth: function () {
-      return this.bug.Months[this.currentMonth]
+      if (this.hemisphere) {
+        return this.bug.SouthMonths[this.currentMonth]
+      } else {
+        return this.bug.NorthMonths[this.currentMonth]
+      }
     },
     showIfCurrentTime: function () {
       theTime = new Date()
@@ -72,13 +79,16 @@ Vue.component("bug", {
       }
     }
   },
-  template: `<div class="critter" v-if="showIfCurrentMonth && showIfCurrentTime">
+  template: `<div class="critter" v-if="showIfCurrentMonth && showIfCurrentTime && bug.Bug.toLowerCase().includes(this.search)">
         <h4>{{ bug.Bug }}</h4>
         <span class="location">Location: {{ location }}</span>
         <span class="availability-time" v-if="bug.StartTime != 0">Availability: {{ bug.StartTime }}&#58;00  -{{ bug.EndTime }}&#58;00</span>
         <span class="availability-time" v-else>Availability: Any time</span>
-        <div class="datebox">
-        <span class="availability-date" v-for="(month, index) in bug.Months" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
+        <div class="datebox" v-if="hemisphere == 0">
+        <span class="availability-date" v-for="(month, index) in bug.NorthMonths" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
+        </div>
+        <div class="datebox" v-else>
+        <span class="availability-date" v-for="(month, index) in bug.SouthMonths" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
         </div>
         <span class="value">Bells: {{ bug.Value }}</span>
         </div>`
