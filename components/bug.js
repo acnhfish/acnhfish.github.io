@@ -31,12 +31,13 @@ Vue.component("bug", {
     },
     showIfCurrentTime: function() {
       if (this.hourChecked) {
-        theTime = new Date();
-        currentTime = theTime.getHours();
+        currentTime = this.currentTime;
         startTime = this.bug.StartTime;
         if (this.bug.StartTime > this.bug.EndTime) {
-          startTime = this.bug.StartTime - 24;
-          currentTime = theTime.getHours() - 24;
+          startTime -= 24;
+          if (currentTime > 12) {
+            currentTime -= 24
+          }
         }
         if (this.bug.StartTime == this.bug.EndTime) {
           return true;

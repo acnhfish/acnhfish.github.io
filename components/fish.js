@@ -31,12 +31,13 @@ Vue.component("fish", {
     },
     showIfCurrentTime: function() {
       if (this.hourChecked) {
-        theTime = new Date();
-        currentTime = theTime.getHours();
+        currentTime = this.currentTime;
         startTime = this.fish.StartTime;
         if (this.fish.StartTime > this.fish.EndTime) {
-          startTime = this.fish.StartTime - 24;
-          currentTime = theTime.getHours() - 24;
+          startTime -= 24;
+          if (currentTime > 12) {
+            currentTime -= 24;
+          }
         }
         if (this.fish.StartTime == this.fish.EndTime) {
           return true;
@@ -47,7 +48,7 @@ Vue.component("fish", {
       }
     },
     showIfSearch: function() {
-      return this.bug.Bug.toLowerCase().includes(this.search);
+      return this.fish.Fish.toLowerCase().includes(this.search);
     },
     shadowType: function() {
       switch (this.fish.ShadowType) {

@@ -1668,10 +1668,12 @@ var vm = new Vue({
     ],
     currentMonth: month,
     currentHour: hour,
+    currentTime: moment(),
     bugsChecked: true,
     fishChecked: true,
     monthChecked: true,
     hourChecked: true,
+    autoTimeChecked: true,
     showOrHideFishText: "Hide fish",
     showOrHideBugsText: "Hide bugs",
     hemisphereButtonText: "Switch to southern hemisphere"
@@ -1711,6 +1713,23 @@ var vm = new Vue({
       } else {
         this.hemisphereButtonText = "Switch to northern hemisphere";
       }
+    },
+    updateTime: function () {
+        setIntervalID = setInterval(function () {
+          this.currentTime = moment()
+        }.bind(this), 1000)
+      
+    },
+    autoTimeButton: function () {
+      this.autoTimeChecked = !this.autoTimeChecked
+      if (!this.autoTimeChecked) {
+        clearInterval(setIntervalID)
+      } else {
+        this.updateTime()
+      }
     }
+  },
+  created: function () {
+    this.updateTime()
   }
 });
