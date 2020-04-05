@@ -750,6 +750,7 @@ bugs = [
 fish = [
     {
       Fish: "Anchovy",
+      id: 56,
       Location: 5,
       ShadowType: 1,
       Value: 200,
@@ -760,6 +761,7 @@ fish = [
     },
     {
       Fish: "Angelfish",
+      id: 36,
       Location: 2,
       ShadowType: 1,
       Value: 3000,
@@ -770,6 +772,7 @@ fish = [
     },
     {
       Fish: "Arapaima",
+      id: 44,
       Location: 2,
       ShadowType: 5,
       Value: 10000,
@@ -780,6 +783,7 @@ fish = [
     },
     {
       Fish: "Arowana",
+      id: 41,
       Location: 2,
       ShadowType: 3,
       Value: 10000,
@@ -790,6 +794,7 @@ fish = [
     },
     {
       Fish: "Barred Knifejaw",
+      id: 58,
       Location: 5,
       ShadowType: 2,
       Value: 5000,
@@ -800,9 +805,10 @@ fish = [
     },
     {
       Fish: "Barreleye",
+      id: 79,
       Location: 5,
       ShadowType: 1,
-      Value: 15000,
+      Value: 12000,
       StartTime: 21,
       EndTime: 4,
       NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -810,6 +816,7 @@ fish = [
     },
     {
       Fish: "Betta",
+      id: 37,
       Location: 2,
       ShadowType: 1,
       Value: 2500,
@@ -820,6 +827,7 @@ fish = [
     },
     {
       Fish: "Bitterling",
+      id: 1,
       Location: 2,
       ShadowType: 0,
       Value: 900,
@@ -830,6 +838,7 @@ fish = [
     },
     {
       Fish: "Black Bass",
+      id: 22,
       Location: 2,
       ShadowType: 3,
       Value: 400,
@@ -840,6 +849,7 @@ fish = [
     },
     {
       Fish: "Blowfish",
+      id: 54,
       Location: 5,
       ShadowType: 2,
       Value: 5000,
@@ -850,6 +860,7 @@ fish = [
     },
     {
       Fish: "Blue Marlin",
+      id: 67,
       Location: 0,
       ShadowType: 4,
       Value: 10000,
@@ -860,6 +871,7 @@ fish = [
     },
     {
       Fish: "Bluegill",
+      id: 20,
       Location: 2,
       ShadowType: 1,
       Value: 180,
@@ -870,6 +882,7 @@ fish = [
     },
     {
       Fish: "Butterfly Fish",
+      id: 51,
       Location: 5,
       ShadowType: 1,
       Value: 1000,
@@ -880,6 +893,7 @@ fish = [
     },
     {
       Fish: "Carp",
+      id: 5,
       Location: 1,
       ShadowType: 3,
       Value: 300,
@@ -890,6 +904,7 @@ fish = [
     },
     {
       Fish: "Catfish",
+      id: 18,
       Location: 1,
       ShadowType: 3,
       Value: 800,
@@ -900,6 +915,7 @@ fish = [
     },
     {
       Fish: "Char",
+      id: 28,
       Location: 3,
       ShadowType: 2,
       Value: 3800,
@@ -910,6 +926,7 @@ fish = [
     },
     {
       Fish: "Cherry Salmon",
+      id: 27,
       Location: 2,
       ShadowType: 2,
       Value: 1000,
@@ -920,6 +937,7 @@ fish = [
     },
     {
       Fish: "Clown Fish",
+      id: 49,
       Location: 5,
       ShadowType: 0,
       Value: 650,
@@ -930,6 +948,7 @@ fish = [
     },
     {
       Fish: "Coelacanth",
+      id: 80,
       Location: 6,
       ShadowType: 5,
       Value: 15000,
@@ -940,6 +959,7 @@ fish = [
     },
     {
       Fish: "Crawfish",
+      id: 11,
       Location: 1,
       ShadowType: 1,
       Value: 200,
@@ -950,6 +970,7 @@ fish = [
     },
     {
       Fish: "Crucian Carp",
+      id: 3,
       Location: 2,
       ShadowType: 1,
       Value: 160,
@@ -960,6 +981,7 @@ fish = [
     },
     {
       Fish: "Dab",
+      id: 61,
       Location: 5,
       ShadowType: 2,
       Value: 300,
@@ -970,6 +992,7 @@ fish = [
     },
     {
       Fish: "Dace",
+      id: 4,
       Location: 2,
       ShadowType: 2,
       Value: 240,
@@ -980,6 +1003,7 @@ fish = [
     },
     {
       Fish: "Dorado",
+      id: 42,
       Location: 2,
       ShadowType: 4,
       Value: 15000,
@@ -990,6 +1014,7 @@ fish = [
     },
     {
       Fish: "Football Fish",
+      id: 77,
       Location: 5,
       ShadowType: 3,
       Value: 2500,
@@ -1000,6 +1025,7 @@ fish = [
     },
     {
       Fish: "Freshwater Goby",
+      id: 16,
       Location: 2,
       ShadowType: 1,
       Value: 400,
@@ -1010,6 +1036,7 @@ fish = [
     },
     {
       Fish: "Frog",
+      id: 15,
       Location: 1,
       ShadowType: 1,
       Value: 120,
@@ -1020,6 +1047,7 @@ fish = [
     },
     {
       Fish: "Gar",
+      id: 43,
       Location: 1,
       ShadowType: 5,
       Value: 6000,
@@ -1030,6 +1058,7 @@ fish = [
     },
     {
       Fish: "Giant Snakehead",
+      id: 19,
       Location: 1,
       ShadowType: 4,
       Value: 5500,
@@ -1040,6 +1069,7 @@ fish = [
     },
     {
       Fish: "Giant Trevally",
+      id: 68,
       Location: 0,
       ShadowType: 3,
       Value: 4500,
@@ -1050,6 +1080,7 @@ fish = [
     },
     {
       Fish: "Golden Trout",
+      id: 29,
       Location: 3,
       ShadowType: 3,
       Value: 15000,
@@ -1060,6 +1091,7 @@ fish = [
     },
     {
       Fish: "Goldfish",
+      id: 7,
       Location: 1,
       ShadowType: 0,
       Value: 1300,
@@ -1070,6 +1102,7 @@ fish = [
     },
     {
       Fish: "Great White Shark",
+      id: 74,
       Location: 5,
       ShadowType: 6,
       Value: 15000,
@@ -1080,6 +1113,7 @@ fish = [
     },
     {
       Fish: "Guppy",
+      id: 34,
       Location: 2,
       ShadowType: 0,
       Value: 1300,
@@ -1090,6 +1124,7 @@ fish = [
     },
     {
       Fish: "Hammerhead Shark",
+      id: 73,
       Location: 5,
       ShadowType: 6,
       Value: 8000,
@@ -1100,6 +1135,7 @@ fish = [
     },
     {
       Fish: "Horse Mackerel",
+      id: 57,
       Location: 5,
       ShadowType: 1,
       Value: 150,
@@ -1110,6 +1146,7 @@ fish = [
     },
     {
       Fish: "Killifish",
+      id: 10,
       Location: 1,
       ShadowType: 0,
       Value: 300,
@@ -1120,6 +1157,7 @@ fish = [
     },
     {
       Fish: "King Salmon",
+      id: 32,
       Location: 4,
       ShadowType: 0,
       Value: 1800,
@@ -1130,6 +1168,7 @@ fish = [
     },
     {
       Fish: "Koi",
+      id: 6,
       Location: 1,
       ShadowType: 3,
       Value: 4000,
@@ -1140,6 +1179,7 @@ fish = [
     },
     {
       Fish: "Loach",
+      id: 17,
       Location: 2,
       ShadowType: 1,
       Value: 400,
@@ -1150,6 +1190,7 @@ fish = [
     },
     {
       Fish: "Mahi-mahi",
+      id: 69, /* nice */
       Location: 5,
       ShadowType: 3,
       Value: 6000,
@@ -1160,6 +1201,7 @@ fish = [
     },
     {
       Fish: "Mitten Crab",
+      id: 33,
       Location: 2,
       ShadowType: 1,
       Value: 2000,
@@ -1170,6 +1212,7 @@ fish = [
     },
     {
       Fish: "Moray Eel",
+      id: 64,
       Location: 5,
       ShadowType: 7,
       Value: 2000,
@@ -1180,6 +1223,7 @@ fish = [
     },
     {
       Fish: "Napoleonfish",
+      id: 52,
       Location: 5,
       ShadowType: 5,
       Value: 10000,
@@ -1190,6 +1234,7 @@ fish = [
     },
     {
       Fish: "Neon Tetra",
+      id: 38,
       Location: 2,
       ShadowType: 0,
       Value: 500,
@@ -1200,6 +1245,7 @@ fish = [
     },
     {
       Fish: "Nibble Fish",
+      id: 35,
       Location: 2,
       ShadowType: 1,
       Value: 1500,
@@ -1210,6 +1256,7 @@ fish = [
     },
     {
       Fish: "Oarfish",
+      id: 78,
       Location: 5,
       ShadowType: 5,
       Value: 9000,
@@ -1220,6 +1267,7 @@ fish = [
     },
     {
       Fish: "Ocean Sunfish",
+      id: 70,
       Location: 5,
       ShadowType: 6,
       Value: 4000,
@@ -1230,6 +1278,7 @@ fish = [
     },
     {
       Fish: "Olive Flounder",
+      id: 62,
       Location: 5,
       ShadowType: 3,
       Value: 800,
@@ -1240,6 +1289,7 @@ fish = [
     },
     {
       Fish: "Pale Chub",
+      id: 2,
       Location: 2,
       ShadowType: 0,
       Value: 160,
@@ -1250,6 +1300,7 @@ fish = [
     },
     {
       Fish: "Pike",
+      id: 24,
       Location: 2,
       ShadowType: 4,
       Value: 1800,
@@ -1260,6 +1311,7 @@ fish = [
     },
     {
       Fish: "Piranha (afternoon)",
+      id: 40,
       Location: 2,
       ShadowType: 1,
       Value: 2500,
@@ -1270,6 +1322,7 @@ fish = [
     },
     {
       Fish: "Piranha (night)",
+      id: 40,
       Location: 2,
       ShadowType: 1,
       Value: 2500,
@@ -1280,6 +1333,7 @@ fish = [
     },
     {
       Fish: "Pond Smelt",
+      id: 25,
       Location: 2,
       ShadowType: 1,
       Value: 500,
@@ -1290,6 +1344,7 @@ fish = [
     },
     {
       Fish: "Pop-eyed Goldfish",
+      id: 8,
       Location: 1,
       ShadowType: 0,
       Value: 1300,
@@ -1300,6 +1355,7 @@ fish = [
     },
     {
       Fish: "Puffer Fish",
+      id: 8,
       Location: 5,
       ShadowType: 2,
       Value: 250,
@@ -1310,6 +1366,7 @@ fish = [
     },
     {
       Fish: "Rainbowfish",
+      id: 39,
       Location: 2,
       ShadowType: 1,
       Value: 800,
@@ -1320,6 +1377,7 @@ fish = [
     },
     {
       Fish: "Ranchu Goldfish",
+      id: 9,
       Location: 1,
       ShadowType: 1,
       Value: 4500,
@@ -1330,6 +1388,7 @@ fish = [
     },
     {
       Fish: "Ray",
+      id: 71,
       Location: 5,
       ShadowType: 4,
       Value: 3000,
@@ -1340,6 +1399,7 @@ fish = [
     },
     {
       Fish: "Red Snapper",
+      id: 60,
       Location: 5,
       ShadowType: 3,
       Value: 3000,
@@ -1350,6 +1410,7 @@ fish = [
     },
     {
       Fish: "Ribbon Eel",
+      id: 65,
       Location: 5,
       ShadowType: 7,
       Value: 600,
@@ -1360,6 +1421,7 @@ fish = [
     },
     {
       Fish: "Saddled Bichir",
+      id: 45,
       Location: 2,
       ShadowType: 3,
       Value: 4000,
@@ -1370,6 +1432,7 @@ fish = [
     },
     {
       Fish: "Salmon",
+      id: 31,
       Location: 4,
       ShadowType: 1,
       Value: 700,
@@ -1380,6 +1443,7 @@ fish = [
     },
     {
       Fish: "Saw Shark",
+      id: 72,
       Location: 5,
       ShadowType: 6,
       Value: 12000,
@@ -1390,6 +1454,7 @@ fish = [
     },
     {
       Fish: "Sea Bass",
+      id: 59,
       Location: 5,
       ShadowType: 4,
       Value: 400,
@@ -1400,6 +1465,7 @@ fish = [
     },
     {
       Fish: "Sea Butterfly",
+      id: 47,
       Location: 5,
       ShadowType: 0,
       Value: 1000,
@@ -1410,6 +1476,7 @@ fish = [
     },
     {
       Fish: "Sea Horse",
+      id: 48,
       Location: 5,
       ShadowType: 0,
       Value: 1100,
@@ -1420,6 +1487,7 @@ fish = [
     },
     {
       Fish: "Snapping Turtle",
+      id: 13,
       Location: 2,
       ShadowType: 4,
       Value: 5000,
@@ -1430,6 +1498,7 @@ fish = [
     },
     {
       Fish: "Soft-shelled Turtle",
+      id: 12,
       Location: 2,
       ShadowType: 3,
       Value: 3750,
@@ -1440,6 +1509,7 @@ fish = [
     },
     {
       Fish: "Squid",
+      id: 63,
       Location: 5,
       ShadowType: 2,
       Value: 500,
@@ -1450,6 +1520,7 @@ fish = [
     },
     {
       Fish: "Stringfish",
+      id: 30,
       Location: 3,
       ShadowType: 5,
       Value: 15000,
@@ -1460,6 +1531,7 @@ fish = [
     },
     {
       Fish: "Sturgeon",
+      id: 46,
       Location: 4,
       ShadowType: 5,
       Value: 10000,
@@ -1470,6 +1542,7 @@ fish = [
     },
     {
       Fish: "Suckerfish",
+      id: 76,
       Location: 5,
       ShadowType: 6,
       Value: 1500,
@@ -1480,6 +1553,7 @@ fish = [
     },
     {
       Fish: "Surgeonfish",
+      id: 50,
       Location: 5,
       ShadowType: 1,
       Value: 1000,
@@ -1490,6 +1564,7 @@ fish = [
     },
     {
       Fish: "Sweetfish",
+      id: 26,
       Location: 2,
       ShadowType: 2,
       Value: 900,
@@ -1500,6 +1575,7 @@ fish = [
     },
     {
       Fish: "Tadpole",
+      id: 14,
       Location: 1,
       ShadowType: 0,
       Value: 100,
@@ -1510,6 +1586,7 @@ fish = [
     },
     {
       Fish: "Tilapia",
+      id: 23,
       Location: 2,
       ShadowType: 2,
       Value: 800,
@@ -1520,6 +1597,7 @@ fish = [
     },
     {
       Fish: "Tuna",
+      id: 66,
       Location: 0,
       ShadowType: 4,
       Value: 7000,
@@ -1530,6 +1608,7 @@ fish = [
     },
     {
       Fish: "Whale Shark",
+      id: 75,
       Location: 5,
       ShadowType: 6,
       Value: 13000,
@@ -1540,6 +1619,7 @@ fish = [
     },
     {
       Fish: "Yellow Perch",
+      id: 21,
       Location: 2,
       ShadowType: 2,
       Value: 300,
@@ -1550,6 +1630,7 @@ fish = [
     },
     {
       Fish: "Zebra Turkeyfish",
+      id: 53,
       Location: 5,
       ShadowType: 2,
       Value: 500,
@@ -1575,12 +1656,21 @@ var vm = new Vue({
     currentMonth: month,
     currentHour: hour,
     bugsChecked: true,
-    fishChecked: true
-
+    fishChecked: true,
+    monthChecked: true,
+    hourChecked: true
   },
   computed: {
     formatSearch: function () {
       return this.search.toLowerCase()
+    }
+  },
+  methods: {
+    changeHourFlag: function (event) {
+      this.hourChecked = !this.hourChecked
+    },
+    changeMonthFlag: function (event) {
+      this.monthChecked = !this.monthChecked
     }
   }
 });

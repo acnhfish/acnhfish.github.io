@@ -30,18 +30,26 @@
     <input type="checkbox" id="fishChecked" v-model="fishChecked">
     <span>Bugs:</span>
     <input type="checkbox" id="bugsChecked" v-model="bugsChecked">
+    <br />
+    <button v-on:click="changeMonthFlag" class="flagbutton"
+      v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}">Filter by
+      month</button>
+    <button v-on:click="changeHourFlag" class="flagbutton"
+      v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}">Filter by hour</button>
     <br />Search:
     <input v-model="search" />
 
     <div class="bugsandfish">
       <div class="bugs" v-if="bugsChecked">
         <bug v-for="bug in bugs" v-bind:key="bug.Bug" :bug="bug" :months="months" :current-Month="currentMonth"
-          :hemisphere="selectedHemisphere" :search="formatSearch">
+          :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
+          :hour-Checked="hourChecked">
         </bug>
       </div>
       <div class="fish" v-if="fishChecked">
         <fish v-for="fish in fishes" v-bind:key="fish.Fish" :fish="fish" :months="months" :current-Month="currentMonth"
-          :hemisphere="selectedHemisphere" :search="formatSearch">
+          :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
+          :hour-Checked="hourChecked">
         </fish>
       </div>
     </div>

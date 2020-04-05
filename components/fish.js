@@ -5,7 +5,9 @@ Vue.component("fish", {
     currentMonth: Number,
     currentTime: Number,
     hemisphere: Number,
-    search: String
+    search: String,
+    monthChecked: Boolean,
+    hourChecked: Boolean
   },
   data: function() {
     return {};
@@ -17,24 +19,31 @@ Vue.component("fish", {
   },
   computed: {
     showIfCurrentMonth: function () {
-      if (this.hemisphere) {
-        return this.fish.SouthMonths[this.currentMonth]
+      if (this.monthChecked) {
+
+        if (this.hemisphere) {
+          return this.fish.SouthMonths[this.currentMonth]
+        } else {
+          return this.fish.NorthMonths[this.currentMonth]
+        }
       } else {
-        return this.fish.NorthMonths[this.currentMonth]
+        return true
       }
     },
     showIfCurrentTime: function () {
-      theTime = new Date()
-      currentTime = theTime.getHours()
-      startTime = this.fish.StartTime
-      if (this.fish.StartTime > this.fish.EndTime) {
-        startTime = this.fish.StartTime - 24
-        currentTime = theTime.getHours() - 24
-      }
-      if (this.fish.StartTime == this.fish.EndTime) {
-        return true
-      }
-      return (currentTime >= startTime && currentTime < this.fish.EndTime)
+      if (this.hourChecked) {
+        theTime = new Date()
+        currentTime = theTime.getHours()
+        startTime = this.fish.StartTime
+        if (this.fish.StartTime > this.fish.EndTime) {
+          startTime = this.fish.StartTime - 24
+          currentTime = theTime.getHours() - 24
+        }
+        if (this.fish.StartTime == this.fish.EndTime) {
+          return true
+        }
+        return (currentTime >= startTime && currentTime < this.fish.EndTime)
+      } else { return true }
     },
     showIfSearch: function () {
       return this.bug.Bug.toLowerCase().includes(this.search)
@@ -79,7 +88,7 @@ Vue.component("fish", {
     }
   },
 
-  template: `<div class="critter" v-if="showIfCurrentMonth && showIfCurrentTime && fish.Fish.toLowerCase().includes(this.search)">
+  template: `<div class="critter" v-if="showIfCurrentMonth  && showIfCurrentTime && fish.Fish.toLowerCase().includes(this.search)">
         <h4>{{ fish.Fish }}</h4>
         <span class="location">{{ location }}</span>
         <span class="fish-shadow">{{ shadowType }} </span>

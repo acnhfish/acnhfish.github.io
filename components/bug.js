@@ -5,7 +5,9 @@ Vue.component("bug", {
     currentMonth: Number,
     currentTime: Number,
     hemisphere: Number,
-    search: String
+    search: String,
+    monthChecked: Boolean,
+    hourChecked: Boolean
   },
   data: function() {
     return {};
@@ -17,24 +19,32 @@ Vue.component("bug", {
   },
   computed: {
     showIfCurrentMonth: function () {
-      if (this.hemisphere) {
-        return this.bug.SouthMonths[this.currentMonth]
+      if (this.monthChecked) {
+        if (this.hemisphere) {
+          return this.bug.SouthMonths[this.currentMonth]
+        } else {
+          return this.bug.NorthMonths[this.currentMonth]
+        }
       } else {
-        return this.bug.NorthMonths[this.currentMonth]
+        return true
       }
     },
     showIfCurrentTime: function () {
-      theTime = new Date()
-      currentTime = theTime.getHours()
-      startTime = this.bug.StartTime
-      if (this.bug.StartTime > this.bug.EndTime) {
-        startTime = this.bug.StartTime - 24
-        currentTime = theTime.getHours() - 24
-      }
-      if (this.bug.StartTime == this.bug.EndTime) {
+      if (this.hourChecked) {
+        theTime = new Date()
+        currentTime = theTime.getHours()
+        startTime = this.bug.StartTime
+        if (this.bug.StartTime > this.bug.EndTime) {
+          startTime = this.bug.StartTime - 24
+          currentTime = theTime.getHours() - 24
+        }
+        if (this.bug.StartTime == this.bug.EndTime) {
+          return true
+        }
+        return (currentTime >= startTime && currentTime < this.bug.EndTime)
+      } else {
         return true
       }
-      return (currentTime >= startTime && currentTime < this.bug.EndTime)
     },
     location: function () {
       switch (this.bug.Location) {
