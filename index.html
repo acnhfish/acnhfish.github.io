@@ -43,13 +43,13 @@
         v-on:click="changeMonthFlag"
         v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}"
       >
-        Filter by month
+        Filter by month: {{ monthChecked ? "On" : "Off" }}
       </button>
       <button
         v-on:click="changeHourFlag"
         v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}"
       >
-        Filter by hour
+        Filter by hour {{ hourChecked ? "On" : "Off" }}
       </button>
       <br />Search:
       <input v-model="search" />
