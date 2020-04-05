@@ -4,7 +4,7 @@ Vue.component("fish", {
     months: Array,
     currentMonth: Number,
     currentTime: Number,
-    hemisphere: Number,
+    hemisphere: Boolean,
     search: String,
     monthChecked: Boolean,
     hourChecked: Boolean
@@ -13,77 +13,78 @@ Vue.component("fish", {
     return {};
   },
   methods: {
-    formatMonth: function (index) {
-      return this.months[index]
+    formatMonth: function(index) {
+      return this.months[index];
     }
   },
   computed: {
-    showIfCurrentMonth: function () {
+    showIfCurrentMonth: function() {
       if (this.monthChecked) {
-
         if (this.hemisphere) {
-          return this.fish.SouthMonths[this.currentMonth]
+          return this.fish.SouthMonths[this.currentMonth];
         } else {
-          return this.fish.NorthMonths[this.currentMonth]
+          return this.fish.NorthMonths[this.currentMonth];
         }
       } else {
-        return true
+        return true;
       }
     },
-    showIfCurrentTime: function () {
+    showIfCurrentTime: function() {
       if (this.hourChecked) {
-        theTime = new Date()
-        currentTime = theTime.getHours()
-        startTime = this.fish.StartTime
+        theTime = new Date();
+        currentTime = theTime.getHours();
+        startTime = this.fish.StartTime;
         if (this.fish.StartTime > this.fish.EndTime) {
-          startTime = this.fish.StartTime - 24
-          currentTime = theTime.getHours() - 24
+          startTime = this.fish.StartTime - 24;
+          currentTime = theTime.getHours() - 24;
         }
         if (this.fish.StartTime == this.fish.EndTime) {
-          return true
+          return true;
         }
-        return (currentTime >= startTime && currentTime < this.fish.EndTime)
-      } else { return true }
-    },
-    showIfSearch: function () {
-      return this.bug.Bug.toLowerCase().includes(this.search)
-    },
-    shadowType: function () {
-      switch (this.fish.ShadowType) {
-        case 0:
-          return "Smallest"
-        case 1:
-          return "Small"
-        case 2:
-          return "Medium"
-        case 3:
-          return "Large"
-        case 4:
-          return "Extra Large"
-        case 5:
-          return "Largest"
-        case 6:
-          return "Largest with Fin"
-        case 7:
-          return "Narrow"
+        return currentTime >= startTime && currentTime < this.fish.EndTime;
+      } else {
+        return true;
       }
     },
-    location: function () { 
+    showIfSearch: function() {
+      return this.bug.Bug.toLowerCase().includes(this.search);
+    },
+    shadowType: function() {
+      switch (this.fish.ShadowType) {
+        case 0:
+          return "Smallest";
+        case 1:
+          return "Small";
+        case 2:
+          return "Medium";
+        case 3:
+          return "Large";
+        case 4:
+          return "Extra Large";
+        case 5:
+          return "Largest";
+        case 6:
+          return "Largest with Fin";
+        case 7:
+          return "Narrow";
+      }
+    },
+    location: function() {
       switch (this.fish.Location) {
         case 0:
-          return "Pier"
+          return "Pier";
         case 1:
-          return "Pond"
+          return "Pond";
         case 2:
-          return "River"
+          return "River";
         case 3:
-          return "Clifftop River"
+          return "Clifftop River";
         case 4:
-          return "River mouth"
+          return "River mouth";
         case 5:
-          return "Sea"
+          return "Sea";
         case 6:
-          return "Sea (raining)"
+          return "Sea (raining)";
       }
     }
   },
@@ -94,7 +95,7 @@ Vue.component("fish", {
         <span class="fish-shadow">{{ shadowType }} </span>
         <span class="availability-time" v-if="fish.StartTime != 0">{{ fish.StartTime }}&#58;00-{{ fish.EndTime }}&#58;00</span>
         <span class="availability-time" v-else>Any time</span>
-        <div class="datebox" v-if="hemisphere == 0">
+        <div class="datebox" v-if="hemisphere">
         <span class="availability-date" v-for="(month, index) in fish.NorthMonths" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
         </div>
         <div class="datebox" v-else>

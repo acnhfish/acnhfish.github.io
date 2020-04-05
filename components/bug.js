@@ -4,7 +4,7 @@ Vue.component("bug", {
     months: Array,
     currentMonth: Number,
     currentTime: Number,
-    hemisphere: Number,
+    hemisphere: Boolean,
     search: String,
     monthChecked: Boolean,
     hourChecked: Boolean
@@ -13,79 +13,79 @@ Vue.component("bug", {
     return {};
   },
   methods: {
-    formatMonth: function (index) {
-      return this.months[index]
+    formatMonth: function(index) {
+      return this.months[index];
     }
   },
   computed: {
-    showIfCurrentMonth: function () {
+    showIfCurrentMonth: function() {
       if (this.monthChecked) {
         if (this.hemisphere) {
-          return this.bug.SouthMonths[this.currentMonth]
+          return this.bug.SouthMonths[this.currentMonth];
         } else {
-          return this.bug.NorthMonths[this.currentMonth]
+          return this.bug.NorthMonths[this.currentMonth];
         }
       } else {
-        return true
+        return true;
       }
     },
-    showIfCurrentTime: function () {
+    showIfCurrentTime: function() {
       if (this.hourChecked) {
-        theTime = new Date()
-        currentTime = theTime.getHours()
-        startTime = this.bug.StartTime
+        theTime = new Date();
+        currentTime = theTime.getHours();
+        startTime = this.bug.StartTime;
         if (this.bug.StartTime > this.bug.EndTime) {
-          startTime = this.bug.StartTime - 24
-          currentTime = theTime.getHours() - 24
+          startTime = this.bug.StartTime - 24;
+          currentTime = theTime.getHours() - 24;
         }
         if (this.bug.StartTime == this.bug.EndTime) {
-          return true
+          return true;
         }
-        return (currentTime >= startTime && currentTime < this.bug.EndTime)
+        return currentTime >= startTime && currentTime < this.bug.EndTime;
       } else {
-        return true
+        return true;
       }
     },
-    location: function () {
+    location: function() {
       switch (this.bug.Location) {
         case 0:
-          return "Beach"
+          return "Beach";
         case 1:
-          return "Shaking trees"
+          return "Shaking trees";
         case 2:
-          return "Flying"
+          return "Flying";
         case 3:
-          return "Flying by light"
+          return "Flying by light";
         case 4:
-          return "Hit rock"
+          return "Hit rock";
         case 5:
-          return "Near tree, looks like furniture leaf"
+          return "Near tree, looks like furniture leaf";
         case 6:
-          return "On flowers"
+          return "On flowers";
         case 7:
-          return "On the ground"
+          return "On the ground";
         case 8:
-          return "On rocks in the rain"
+          return "On rocks in the rain";
         case 9:
-          return "On beach rocks"
+          return "On beach rocks";
         case 10:
-          return "On rotten food"
+          return "On rotten food";
         case 11:
-          return "On trash"
+          return "On trash";
         case 12:
-          return "Tree stumps"
+          return "Tree stumps";
         case 13:
-          return "On trees"
+          return "On trees";
         case 14:
-          return "On villagers"
+          return "On villagers";
         case 15:
-          return "On white flowers"
+          return "On white flowers";
         case 16:
-          return "On pond"
+          return "On pond";
         case 17:
-          return "On ponds and rivers"
+          return "On ponds and rivers";
         case 18:
-          return "Underground"
+          return "Underground";
       }
     }
   },
@@ -94,7 +94,7 @@ Vue.component("bug", {
         <span class="location">Location: {{ location }}</span>
         <span class="availability-time" v-if="bug.StartTime != 0">Availability: {{ bug.StartTime }}&#58;00  -{{ bug.EndTime }}&#58;00</span>
         <span class="availability-time" v-else>Availability: Any time</span>
-        <div class="datebox" v-if="hemisphere == 0">
+        <div class="datebox" v-if="hemisphere">
         <span class="availability-date" v-for="(month, index) in bug.NorthMonths" v-bind:class="{ available: month }">{{ formatMonth(index) }}</span>
         </div>
         <div class="datebox" v-else>

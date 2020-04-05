@@ -1,63 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>ACNH Bugs and Fish</title>
+    <script src="js/vue.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <title>ACNH Bugs and Fish</title>
-  <script src="js/vue.js"></script>
-</head>
+  <body>
+    <div id="app">
+      <h1>WIP Bugs and fish viewer</h1>
+      Currently shows what bugs and fish are available locally to you, right
+      now<br />
+      Hemisphere:
+      <button v-on:click="changeHemisphere" class="greenButton">
+        {{ hemisphereButtonText }}
+      </button>
+      <br />
+      Change month:
+      <select class="picker" v-model="currentMonth">
+        <option v-for="(month, index) in months" :value="index"
+          >{{ month }}</option
+        >
+      </select>
+      Change time: coming soon
+      <br />
+      <button
+        v-on:click="changeFishFlag"
+        v-bind:class="{greenButton: fishChecked, redButton: !fishChecked}"
+      >
+        {{ showOrHideFishText }}
+      </button>
+      <button
+        v-on:click="changeBugsFlag"
+        v-bind:class="{greenButton: bugsChecked, redButton: !bugsChecked}"
+      >
+        {{ showOrHideBugsText }}
+      </button>
+      <br />
+      <button
+        v-on:click="changeMonthFlag"
+        v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}"
+      >
+        Filter by month
+      </button>
+      <button
+        v-on:click="changeHourFlag"
+        v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}"
+      >
+        Filter by hour
+      </button>
+      <br />Search:
+      <input v-model="search" />
 
-<body>
-  <div id="app">
-    <h1>WIP Bugs and fish viewer</h1>
-    Currently shows what bugs and fish are available locally to you, right
-    now<br />
-    Hemisphere:
-    <select v-model.number="selectedHemisphere">
-      <option selected value="0">Northern</option>
-      <option value="1">Southern</option>
-    </select>
-    <br />
-    Change month:
-    <select class="picker" v-model="currentMonth">
-      <option v-for="(month, index) in months" :value="index">{{ month }}</option>
-    </select>
-    Change time:
-    <br />
-    <span>Fish:</span>
-    <input type="checkbox" id="fishChecked" v-model="fishChecked">
-    <span>Bugs:</span>
-    <input type="checkbox" id="bugsChecked" v-model="bugsChecked">
-    <br />
-    <button v-on:click="changeMonthFlag" class="flagbutton"
-      v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}">Filter by
-      month</button>
-    <button v-on:click="changeHourFlag" class="flagbutton"
-      v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}">Filter by hour</button>
-    <br />Search:
-    <input v-model="search" />
-
-    <div class="bugsandfish">
-      <div class="bugs" v-if="bugsChecked">
-        <bug v-for="bug in bugs" v-bind:key="bug.Bug" :bug="bug" :months="months" :current-Month="currentMonth"
-          :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
-          :hour-Checked="hourChecked">
-        </bug>
-      </div>
-      <div class="fish" v-if="fishChecked">
-        <fish v-for="fish in fishes" v-bind:key="fish.Fish" :fish="fish" :months="months" :current-Month="currentMonth"
-          :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
-          :hour-Checked="hourChecked">
-        </fish>
+      <div class="bugsandfish">
+        <div class="fish" v-if="fishChecked">
+          <fish
+            v-for="fish in fishes"
+            v-bind:key="fish.Fish"
+            :fish="fish"
+            :months="months"
+            :current-Month="currentMonth"
+            :hemisphere="selectedHemisphere"
+            :search="formatSearch"
+            :month-Checked="monthChecked"
+            :hour-Checked="hourChecked"
+          >
+          </fish>
+        </div>
+        <div class="bugs" v-if="bugsChecked">
+          <bug
+            v-for="bug in bugs"
+            v-bind:key="bug.Bug"
+            :bug="bug"
+            :months="months"
+            :current-Month="currentMonth"
+            :hemisphere="selectedHemisphere"
+            :search="formatSearch"
+            :month-Checked="monthChecked"
+            :hour-Checked="hourChecked"
+          >
+          </bug>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="components/bug.js"></script>
-  <script src="components/fish.js"></script>
+    <script src="components/bug.js"></script>
+    <script src="components/fish.js"></script>
 
-  <script src="js/index.js"></script>
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>
