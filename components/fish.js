@@ -21,9 +21,9 @@ Vue.component("fish", {
     showIfCurrentMonth: function() {
       if (this.monthChecked) {
         if (this.hemisphere) {
-          return this.fish.SouthMonths[this.currentMonth];
-        } else {
           return this.fish.NorthMonths[this.currentMonth];
+        } else {
+          return this.fish.SouthMonths[this.currentMonth];
         }
       } else {
         return true;

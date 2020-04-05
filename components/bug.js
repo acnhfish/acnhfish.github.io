@@ -21,9 +21,9 @@ Vue.component("bug", {
     showIfCurrentMonth: function() {
       if (this.monthChecked) {
         if (this.hemisphere) {
-          return this.bug.SouthMonths[this.currentMonth];
-        } else {
           return this.bug.NorthMonths[this.currentMonth];
+        } else {
+          return this.bug.SouthMonths[this.currentMonth];
         }
       } else {
         return true;
