@@ -13,52 +13,49 @@
 <body>
   <div id="app">
     <h1>WIP Bugs and fish viewer</h1>
-    Current time: {{ currentTime.format("HH:mm:ss") }}
-    <br />
-    <button v-on:click="autoTimeButton"
-      v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
-      {{ autoTimeChecked ? "On" : "Off" }}</button>
-    <br />
-    <span v-if="!autoTimeChecked">Select time:</span>
-    <select v-model="selectedTime" v-if="!autoTimeChecked">
-      <option v-for="hour in 24" :value="hour-1">{{ ('0' + (hour-1)).slice(-2) }}:00</option>
-    </select>
-    <br />
-    Change month:
-    <select class="picker" v-model="currentMonth">
-      <option v-for="(month, index) in months" :value="index">{{ month }}</option>
-    </select>
-    <br />
-    Change time: coming soon
-    <br />
-    <button v-on:click="changeFishFlag" v-bind:class="{greenButton: fishChecked, redButton: !fishChecked}">
-      {{ showOrHideFishText }}
-    </button>
-    <button v-on:click="changeBugsFlag" v-bind:class="{greenButton: bugsChecked, redButton: !bugsChecked}">
-      {{ showOrHideBugsText }}
-    </button>
-    <br />
-    <button v-on:click="changeMonthFlag" v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}">
-      Filter by month: {{ monthChecked ? "On" : "Off" }}
-    </button>
-    <button v-on:click="changeHourFlag" v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}">
-      Filter by hour: {{ hourChecked ? "On" : "Off" }}
-    </button>
-    <br />
-    <button v-on:click="changeHemisphere" class="greenButton">
-      {{ hemisphereButtonText }}
-    </button>
-    <br />Search:
-    <input v-model="search" />
-
+    <div class="topControls">
+      Current time: {{ currentTime.format("HH:mm:ss") }}
+      <button v-on:click="autoTimeButton"
+        v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
+        {{ autoTimeChecked ? "On" : "Off" }}</button>
+      <span v-if="!autoTimeChecked">Select time:</span>
+      <select v-model="selectedTime" v-if="!autoTimeChecked">
+        <option v-for="hour in 24" :value="hour-1">{{ ('0' + (hour-1)).slice(-2) }}:00</option>
+      </select>
+      Change month:
+      <select class="picker" v-model="currentMonth">
+        <option v-for="(month, index) in months" :value="index">{{ month }}</option>
+      </select>
+      <button v-on:click="changeFishFlag" v-bind:class="{greenButton: fishChecked, redButton: !fishChecked}">
+        {{ showOrHideFishText }}
+      </button>
+      <button v-on:click="changeBugsFlag" v-bind:class="{greenButton: bugsChecked, redButton: !bugsChecked}">
+        {{ showOrHideBugsText }}
+      </button>
+      <button v-on:click="changeMonthFlag" v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}">
+        Filter by month: {{ monthChecked ? "On" : "Off" }}
+      </button>
+      <button v-on:click="changeHourFlag" v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}">
+        Filter by hour: {{ hourChecked ? "On" : "Off" }}
+      </button>
+      <button v-on:click="changeHemisphere" class="greenButton">
+        {{ hemisphereButtonText }}
+      </button>
+      Search:
+      <input v-model="search" />
+    </div>
     <div class="bugsandfish">
+      <div class="columnHeader">Fish</div>
       <div class="fish" v-if="fishChecked">
+
         <fish v-for="fish in fishes" v-bind:key="fish.Fish" :fish="fish" :months="months" :current-Month="currentMonth"
           :current-time="Number(currentTime.format('HH'))" :hemisphere="selectedHemisphere" :search="formatSearch"
           :month-Checked="monthChecked" :hour-Checked="hourChecked">
         </fish>
       </div>
+      <div class="columnHeader">Bugs</div>
       <div class="bugs" v-if="bugsChecked">
+
         <bug v-for="bug in bugs" v-bind:key="bug.Bug" :bug="bug" :months="months" :current-Month="currentMonth"
           :current-time="Number(currentTime.format('HH'))" :hemisphere="selectedHemisphere" :search="formatSearch"
           :month-Checked="monthChecked" :hour-Checked="hourChecked">
