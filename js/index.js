@@ -1681,6 +1681,15 @@ var vm = new Vue({
   computed: {
     formatSearch: function() {
       return this.search.toLowerCase();
+    },
+    selectedTime: {
+      get: function () {
+        return Number(this.currentTime.format("HH"))
+      },
+      set: function (newValue) {
+        this.currentTime = moment().set({hour:newValue, minute:0, second:0,millisecond:0})
+      }
+      
     }
   },
   methods: {
@@ -1725,6 +1734,7 @@ var vm = new Vue({
       if (!this.autoTimeChecked) {
         clearInterval(setIntervalID)
       } else {
+        this.currentTime = moment()
         this.updateTime()
       }
     }

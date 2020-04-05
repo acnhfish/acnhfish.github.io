@@ -13,10 +13,16 @@
 <body>
   <div id="app">
     <h1>WIP Bugs and fish viewer</h1>
-    Current time: {{ currentTime.format() }}
-    <button v-on:click="autoTimeButton"
-      v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time</button>
+    Current time: {{ currentTime.format("HH:mm:ss") }}
     <br />
+    <button v-on:click="autoTimeButton"
+      v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
+      {{ autoTimeChecked ? "On" : "Off" }}</button>
+    <br />
+    <span v-if="!autoTimeChecked">Select time:</span>
+    <select v-model="selectedTime" v-if="!autoTimeChecked">
+      <option v-for="hour in 24" :value="hour-1">{{ ('0' + (hour-1)).slice(-2) }}:00</option>
+    </select>
     <br />
     Change month:
     <select class="picker" v-model="currentMonth">
