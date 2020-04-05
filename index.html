@@ -19,10 +19,12 @@
       <button v-on:click="autoTimeButton"
         v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
         {{ autoTimeChecked ? "On" : "Off" }}</button>
-      <span v-if="!autoTimeChecked">Select time:</span>
-      <select class="dropdown" v-model="selectedTime" v-if="!autoTimeChecked">
-        <option v-for="hour in 24" :value="hour-1">{{ ('0' + (hour-1)).slice(-2) }}:00</option>
-      </select>
+      <div class="controlElement">
+        <span v-if="!autoTimeChecked">Select time:</span>
+        <select class="dropdown" v-model="selectedTime" v-if="!autoTimeChecked">
+          <option v-for="hour in 24" :value="hour-1">{{ ('0' + (hour-1)).slice(-2) }}:00</option>
+        </select>
+      </div>
       <div class="controlElement">Change month:
         <select class="dropdown" v-model="currentMonth">
           <option v-for="(month, index) in months" :value="index">{{ month }}</option>
