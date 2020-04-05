@@ -67,10 +67,11 @@
 .critter {
     display: inline-block;
     border: 2px solid black;
-    width: 170px;
+    width: 165px;
     padding: 10px;
     margin:2px;
     border-radius: 5px;
+    font-size: 14px;
 }
 .datebox {
     display: grid;
