@@ -14,16 +14,17 @@
   <div id="app">
     <h1>WIP Bugs and fish viewer</h1>
     <div class="topControls">
-      Current time: {{ currentTime.format("HH:mm:ss") }}
+      <span class="controlElement">Current time: </span><span
+        style="font-family:'Courier New', Courier, monospace">{{ currentTime.format("HH:mm:ss") }}</span>
       <button v-on:click="autoTimeButton"
         v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
         {{ autoTimeChecked ? "On" : "Off" }}</button>
       <span v-if="!autoTimeChecked">Select time:</span>
-      <select v-model="selectedTime" v-if="!autoTimeChecked">
+      <select class="dropdown" v-model="selectedTime" v-if="!autoTimeChecked">
         <option v-for="hour in 24" :value="hour-1">{{ ('0' + (hour-1)).slice(-2) }}:00</option>
       </select>
-      Change month:
-      <select class="picker" v-model="currentMonth">
+      <span class="controlElement">Change month:</span>
+      <select class="dropdown" v-model="currentMonth">
         <option v-for="(month, index) in months" :value="index">{{ month }}</option>
       </select>
       <button v-on:click="changeFishFlag" v-bind:class="{greenButton: fishChecked, redButton: !fishChecked}">
@@ -41,11 +42,10 @@
       <button v-on:click="changeHemisphere" class="greenButton">
         {{ hemisphereButtonText }}
       </button>
-      Search:
-      <input v-model="search" />
+      <input class="searchBox" type="text" placeholder="Search by name" v-model="search" />
     </div>
     <div class="bugsandfish">
-      <div class="columnHeader">Fish</div>
+      <div class="columnHeader" v-if="fishChecked">Fish</div>
       <div class="fish" v-if="fishChecked">
 
         <fish v-for="fish in fishes" v-bind:key="fish.Fish" :fish="fish" :months="months" :current-Month="currentMonth"
@@ -53,7 +53,7 @@
           :month-Checked="monthChecked" :hour-Checked="hourChecked">
         </fish>
       </div>
-      <div class="columnHeader">Bugs</div>
+      <div class="columnHeader" v-if="bugsChecked">Bugs</div>
       <div class="bugs" v-if="bugsChecked">
 
         <bug v-for="bug in bugs" v-bind:key="bug.Bug" :bug="bug" :months="months" :current-Month="currentMonth"
