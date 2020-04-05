@@ -23,26 +23,35 @@
       <select class="dropdown" v-model="selectedTime" v-if="!autoTimeChecked">
         <option v-for="hour in 24" :value="hour-1">{{ ('0' + (hour-1)).slice(-2) }}:00</option>
       </select>
-      <span class="controlElement">Change month:</span>
-      <select class="dropdown" v-model="currentMonth">
-        <option v-for="(month, index) in months" :value="index">{{ month }}</option>
-      </select>
-      <button v-on:click="changeFishFlag" v-bind:class="{greenButton: fishChecked, redButton: !fishChecked}">
-        {{ showOrHideFishText }}
-      </button>
-      <button v-on:click="changeBugsFlag" v-bind:class="{greenButton: bugsChecked, redButton: !bugsChecked}">
-        {{ showOrHideBugsText }}
-      </button>
-      <button v-on:click="changeMonthFlag" v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}">
-        Filter by month: {{ monthChecked ? "On" : "Off" }}
-      </button>
-      <button v-on:click="changeHourFlag" v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}">
-        Filter by hour: {{ hourChecked ? "On" : "Off" }}
-      </button>
-      <button v-on:click="changeHemisphere" class="greenButton">
-        {{ hemisphereButtonText }}
-      </button>
-      <input class="searchBox" type="text" placeholder="Search by name" v-model="search" />
+      <div class="controlElement">Change month:
+        <select class="dropdown" v-model="currentMonth">
+          <option v-for="(month, index) in months" :value="index">{{ month }}</option>
+        </select>
+      </div>
+      <div class="controlElement">
+        <button v-on:click="changeFishFlag" v-bind:class="{greenButton: fishChecked, redButton: !fishChecked}">
+          {{ showOrHideFishText }}
+        </button>
+        <button v-on:click="changeBugsFlag" v-bind:class="{greenButton: bugsChecked, redButton: !bugsChecked}">
+          {{ showOrHideBugsText }}
+        </button>
+      </div>
+      <div class="controlElement">
+        <button v-on:click="changeMonthFlag" v-bind:class="{greenButton: monthChecked, redButton: !monthChecked}">
+          Filter by month: {{ monthChecked ? "On" : "Off" }}
+        </button>
+        <button v-on:click="changeHourFlag" v-bind:class="{greenButton: hourChecked, redButton: !hourChecked}">
+          Filter by hour: {{ hourChecked ? "On" : "Off" }}
+        </button>
+      </div>
+      <div class="controlElement">
+        <button v-on:click="changeHemisphere" class="greenButton">
+          {{ hemisphereButtonText }}
+        </button>
+      </div>
+      <div class="controlElement">
+        <input class="searchBox" type="text" placeholder="Search by name" v-model="search" />
+      </div>
     </div>
     <div class="bugsandfish">
       <div class="columnHeader" v-if="fishChecked">Fish</div>
