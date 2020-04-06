@@ -15,7 +15,7 @@
     <h1>WIP Bugs and fish viewer</h1>
     <div class="topControls">
       <span class="controlElement">Current time: </span><span
-        style="font-family:'Courier New', Courier, monospace">{{ currentTime.format("HH:mm:ss") }}</span>
+        style="font-weight:bold; font-family:'Courier New', Courier, monospace">{{ currentTime.format("HH:mm:ss") }}</span>
       <button v-on:click="autoTimeButton"
         v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
         {{ autoTimeChecked ? "On" : "Off" }}</button>

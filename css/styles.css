@@ -1,6 +1,6 @@
 html {
-    background-color: #29334a;
-    color: lightgrey;
+    background-color: #71B6D9;
+    color: #2E4B59;
 }
 #app {
     margin: auto;
@@ -34,8 +34,8 @@ html {
     display: inline-block;
     font-size:16px;
     padding: .3em 1em .3em .8em;
-    color: lightgrey;
-    background-color: #3a4869;
+    color: #2E4B59;
+    background-color: #86BDD9;
     border: 1px solid rgb(60, 132, 150);
     border-radius: .5em;
 }
@@ -46,28 +46,27 @@ html {
     display: block;
     font-size: 20px;
     border-radius: 5px;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px;
     margin: auto;
     padding: 10px;
     text-align: center;
-    background-color: rgb(71, 161, 131);
+    background-color: #cfe0e8;
     color: black;
 }
 
 .greenButton {
-	background: #72b352;
-	background-color:#77b55a;
+	background: #86BDD9;
+	background-color:#86BDD9;
 	border-radius:4px;
-	border:1px solid #4b8f29;
+	border:1px solid rgb(109, 147, 167);
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:#2E4B59;
 	font-size:15px;
 	font-weight:bold;
     padding:6px 12px;
     margin: 5px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #5b8a3c;
+    text-decoration:none;
 }
 
 .greenButton:active {
@@ -77,31 +76,24 @@ html {
 
 
 .redButton {
-	background-color:#ed2626;
+	background-color:#D9AA71;
 	border-radius:4px;
-	border:1px solid #e02020;
+	border:1px solid rgb(145, 114, 76);
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:#2E4B59;
 	font-size:15px;
 	font-weight:bold;
     padding:6px 12px;
     margin: 5px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #e61717;
 }
 .redButton:active {
 	position:relative;
 	top:1px;
 }
 
-.bugs {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.fish {
+.bugs,.fish {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -109,25 +101,29 @@ html {
 
 .critter {
     display: inline-block;
-    border: 2px solid black;
+    border: 2px solid rgb(38, 88, 95);
     width: 165px;
     padding: 10px;
     margin:2px;
     border-radius: 5px;
     font-size: 14px;
+    background-color: #87bdd8;
 }
 .datebox {
     display: grid;
+    background: rgb(56, 125, 134);
     grid-template-columns: 40px 40px 40px 40px;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid rgb(56, 125, 134);
     color: black;
     width: 160px;
     border-radius: 5px;
+    justify-content: center;
 }
 
 .datebox > span {
-    border: 1px solid black;
+    border: 1px solid rgb(56, 125, 134);
+    border-radius: 5px;
 }
 
 .availability-date {
@@ -139,7 +135,12 @@ html {
     background: lightgreen;
 }
 
-.availability-time {
-    display: flex;
+.availability-time,.location,.fishShadow,.value,.name {
+    color: black;
+    display:flex;
+    border:1px solid rgb(38, 88, 95);
+    padding:1px;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: #b7d7e8;
 }
-

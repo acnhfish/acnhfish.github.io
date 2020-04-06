@@ -91,9 +91,9 @@ Vue.component("fish", {
   },
 
   template: `<div class="critter" v-if="showIfCurrentMonth  && showIfCurrentTime && fish.Fish.toLowerCase().includes(this.search)">
-        <h4>{{ fish.Fish }}</h4>
+        <h4 class="name">{{ fish.Fish }}</h4>
         <span class="location">{{ location }}</span>
-        <span class="fish-shadow">{{ shadowType }} </span>
+        <span class="fishShadow">{{ shadowType }} </span>
         <span class="availability-time" v-if="fish.StartTime != 0">{{ fish.StartTime }}&#58;00-{{ fish.EndTime }}&#58;00</span>
         <span class="availability-time" v-else>Any time</span>
         <div class="datebox" v-if="hemisphere">
