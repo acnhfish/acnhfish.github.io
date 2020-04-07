@@ -109,6 +109,11 @@ html {
     font-size: 14px;
     background-color: #87bdd8;
 }
+
+.collected {
+    background-color: #87d8c0;
+}
+
 .datebox {
     display: grid;
     background: rgb(56, 125, 134);

@@ -1,11 +1,3 @@
-var northern = new Object();
-var southern = new Object();
-var bugs = new Array();
-
-/*
-bugs.filter(bug => bug.Bug === "Evening Cicada")
-*/
-
 bugs = [
   {
     Name: "Agrias Butterfly",
@@ -1644,6 +1636,7 @@ var vm = new Vue({
     fishChecked: true,
     monthChecked: true,
     hourChecked: true,
+    collectedChecked: true,
     autoTimeChecked: true,
     showOrHideFishText: "Hide fish",
     showOrHideBugsText: "Hide bugs",
@@ -1660,17 +1653,16 @@ var vm = new Vue({
       set: function (newValue) {
         this.currentTime = moment().set({hour:newValue, minute:0, second:0,millisecond:0})
       }
-      
     }
   },
   methods: {
-    changeHourFlag: function(event) {
+    changeHourFlag: function (event) {
       this.hourChecked = !this.hourChecked;
     },
-    changeMonthFlag: function(event) {
+    changeMonthFlag: function (event) {
       this.monthChecked = !this.monthChecked;
     },
-    changeFishFlag: function(event) {
+    changeFishFlag: function (event) {
       this.fishChecked = !this.fishChecked;
       if (this.fishChecked) {
         this.showOrHideFishText = "Hide fish";
@@ -1678,7 +1670,7 @@ var vm = new Vue({
         this.showOrHideFishText = "Show fish";
       }
     },
-    changeBugsFlag: function(event) {
+    changeBugsFlag: function (event) {
       this.bugsChecked = !this.bugsChecked;
       if (this.bugsChecked) {
         this.showOrHideBugsText = "Hide bugs";
@@ -1686,7 +1678,7 @@ var vm = new Vue({
         this.showOrHideBugsText = "Show bugs";
       }
     },
-    changeHemisphere: function(event) {
+    changeHemisphere: function (event) {
       this.selectedHemisphere = !this.selectedHemisphere;
       if (this.selectedHemisphere) {
         this.hemisphereButtonText = "Switch to southern hemisphere";
@@ -1694,10 +1686,13 @@ var vm = new Vue({
         this.hemisphereButtonText = "Switch to northern hemisphere";
       }
     },
+    changeCollectedChecked: function () {
+      this.collectedChecked = !this.collectedChecked
+    },
     updateTime: function () {
-        setIntervalID = setInterval(function () {
-          this.currentTime = moment()
-        }.bind(this), 1000)
+      setIntervalID = setInterval(function () {
+        this.currentTime = moment()
+      }.bind(this), 1000)
       
     },
     autoTimeButton: function () {
@@ -1708,7 +1703,19 @@ var vm = new Vue({
         this.currentTime = moment()
         this.updateTime()
       }
+    },
+    getCollected: function (critter) {
+      if (localStorage.getItem(critter) == "true") {
+        return true
+      } else {
+        return false
+      }
+    },
+    saveCollected: function (critter) {
+      localStorage.setItem(critter, !this.getCollected(critter))
+      this.updateTime()
     }
+  
   },
   created: function () {
     this.updateTime()

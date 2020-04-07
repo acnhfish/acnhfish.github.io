@@ -7,8 +7,10 @@ Vue.component("critter", {
     hemisphere: Boolean,
     search: String,
     monthChecked: Boolean,
-    hourChecked: Boolean,
-    isFish: Boolean
+        hourChecked: Boolean,
+    collectedChecked: Boolean,
+    isFish: Boolean,
+    collected: Boolean
   },
   data: function() {
     return {};
@@ -152,10 +154,10 @@ Vue.component("critter", {
         
       }
       return availabilityString.slice(0, -1)
-    }
-  },
-  template: `<div class="critter" v-if="showIfCurrentMonth && showIfCurrentTime && critter.Name.toLowerCase().includes(this.search)">
-        <h4 class="name">{{ critter.Name }}</h4>
+      }
+    },
+  template: `<div class="critter" v-bind:class="{collected: collected}" v-if="showIfCurrentMonth && showIfCurrentTime && critter.Name.toLowerCase().includes(this.search) && (collectedChecked || !collected)">
+        <h4 class="name" v-on:click="$emit('save-collected')">{{ critter.Name }}</h4>
         <span class="location">{{ isFish ? fishLocation : bugLocation }}</span>
         <span class="fishShadow" v-if="isFish">{{ shadowType }} </span>
         <span class="availability-time" v-if="Array.isArray(critter.StartTime)">{{ availabilityArrayHandler }}</span>

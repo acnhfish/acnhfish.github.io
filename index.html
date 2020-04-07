@@ -12,7 +12,8 @@
 
 <body>
   <div id="app">
-    <h1>WIP Bugs and fish viewer</h1>
+    <h1>Animal Crossing: New Horizons Bugs and Fish</h1>
+    <h3>Click/tap the name of the bug or fish to mark it as collected</h3>
     <div class="topControls">
       <span class="controlElement">Current time: </span><span
         style="font-weight:bold; font-family:'Courier New', Courier, monospace">{{ currentTime.format("HH:mm:ss") }}</span>
@@ -52,6 +53,12 @@
         </button>
       </div>
       <div class="controlElement">
+        <button v-on:click="changeCollectedChecked"
+          v-bind:class="{greenButton: collectedChecked, redButton: !collectedChecked}">
+          Show Collected: {{ collectedChecked ? "On" : "Off" }}
+        </button>
+      </div>
+      <div class="controlElement">
         <input class="searchBox" type="text" placeholder="Search by name" v-model="search" />
       </div>
     </div>
@@ -62,7 +69,8 @@
         <critter v-for="fish in fishes" v-bind:key="fish.Name" :critter="fish" :months="months"
           :current-Month="currentMonth" :current-time="Number(currentTime.format('HH'))"
           :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
-          :hour-Checked="hourChecked" :is-fish="true">
+          :hour-Checked="hourChecked" :collected-checked="collectedChecked" :is-fish="true"
+          :collected="getCollected(fish.Name)" v-on:save-collected="saveCollected(fish.Name)">
         </critter>
       </div>
       <div class="columnHeader" v-if="bugsChecked">Bugs</div>
@@ -70,7 +78,8 @@
 
         <critter v-for="bug in bugs" v-bind:key="bug.Name" :critter="bug" :months="months" :current-Month="currentMonth"
           :current-time="Number(currentTime.format('HH'))" :hemisphere="selectedHemisphere" :search="formatSearch"
-          :month-Checked="monthChecked" :hour-Checked="hourChecked" :is-fish="false">
+          :month-Checked="monthChecked" :hour-Checked="hourChecked" :is-fish="false" :collected="getCollected(bug.Name)"
+          v-on:save-collected="saveCollected(bug.Name)">
         </critter>
       </div>
     </div>
