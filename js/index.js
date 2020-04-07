@@ -1638,9 +1638,11 @@ var vm = new Vue({
     hourChecked: true,
     collectedChecked: true,
     autoTimeChecked: true,
+    filtersChecked: false,
     showOrHideFishText: "Hide fish",
     showOrHideBugsText: "Hide bugs",
-    hemisphereButtonText: "Switch to southern hemisphere"
+    hemisphereButtonText: "Switch to southern hemisphere",
+    resetButton: false
   },
   computed: {
     formatSearch: function() {
@@ -1714,6 +1716,27 @@ var vm = new Vue({
     saveCollected: function (critter) {
       localStorage.setItem(critter, !this.getCollected(critter))
       this.updateTime()
+    },
+    filtersCheck: function () {
+      this.filtersChecked = !this.filtersChecked
+    },
+    resetFilters: function () {
+      if (!this.autoTimeChecked) this.autoTimeButton()
+      if (!this.fishChecked) this.changeFishFlag()
+      if (!this.bugsChecked) this.changeBugsFlag()
+      if (!this.monthChecked) this.changeMonthFlag()
+      if (!this.hourChecked) this.changeHourFlag()
+      if (!this.collectedChecked) this.changeCollectedChecked()
+
+      d = new Date()
+      this.currentMonth = d.getMonth()
+    },
+    resetButtonClicked: function () {
+      this.resetButton = !this.resetButton
+    },
+    realResetButtonClicked: function () {
+      localStorage.clear()
+      this.resetButton = false
     }
   
   },

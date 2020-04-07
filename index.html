@@ -14,12 +14,20 @@
   <div id="app">
     <h1>Animal Crossing: New Horizons Bugs and Fish</h1>
     <h3>Click/tap the name of the bug or fish to mark it as collected</h3>
-    <div class="topControls">
-      <span class="controlElement">Current time: </span><span
+    <div class="controlElement">
+      <span>Current time: </span><span
         style="font-weight:bold; font-family:'Courier New', Courier, monospace">{{ currentTime.format("HH:mm:ss") }}</span>
-      <button v-on:click="autoTimeButton"
-        v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
-        {{ autoTimeChecked ? "On" : "Off" }}</button>
+    </div>
+    <div class="controlElement">
+      <button v-on:click="filtersCheck"
+        v-bind:class="{greenButton: !filtersChecked, redButton: filtersChecked}">Filters</button>
+    </div>
+    <div class="topControls" v-if="filtersChecked">
+
+      <div class="controlElement">
+        <button v-on:click="autoTimeButton"
+          v-bind:class="{greenButton: autoTimeChecked, redButton: !autoTimeChecked}">Automatic time:
+          {{ autoTimeChecked ? "On" : "Off" }}</button></div>
       <div class="controlElement">
         <span v-if="!autoTimeChecked">Select time:</span>
         <select class="dropdown" v-model="selectedTime" v-if="!autoTimeChecked">
@@ -57,30 +65,45 @@
           v-bind:class="{greenButton: collectedChecked, redButton: !collectedChecked}">
           Show Collected: {{ collectedChecked ? "On" : "Off" }}
         </button>
+        <div class="controlElement">
+          <button v-on:click="resetFilters" class="greenButton">Reset Filters</button>
+        </div>
+        <div class="controlElement">
+          <button v-on:click="resetButtonClicked" class="redButton"
+            style="background-color: red; color:black;">{{ !resetButton ? "Reset collection" : "Hide this, I'm scared" }}</button>
+        </div>
+        <div class="controlElement" v-if="resetButton"><span class="controlElement">This will delete your entire
+            collection on the website, make sure this is what you want to do</span>
+          <h3>This cannot be undone</h3><button v-on:click="realResetButtonClicked" class="redButton"
+            style="background-color: red; color: black;">RESET</button>
+        </div>
       </div>
+    </div>
+    <div v-else>
       <div class="controlElement">
         <input class="searchBox" type="text" placeholder="Search by name" v-model="search" />
       </div>
-    </div>
-    <div class="bugsandfish">
-      <div class="columnHeader" v-if="fishChecked">Fish</div>
-      <div class="fish" v-if="fishChecked">
+      <div class="bugsandfish">
+        <div class="columnHeader" v-if="fishChecked">Fish</div>
+        <div class="fish" v-if="fishChecked">
 
-        <critter v-for="fish in fishes" v-bind:key="fish.Name" :critter="fish" :months="months"
-          :current-Month="currentMonth" :current-time="Number(currentTime.format('HH'))"
-          :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
-          :hour-Checked="hourChecked" :collected-checked="collectedChecked" :is-fish="true"
-          :collected="getCollected(fish.Name)" v-on:save-collected="saveCollected(fish.Name)">
-        </critter>
-      </div>
-      <div class="columnHeader" v-if="bugsChecked">Bugs</div>
-      <div class="bugs" v-if="bugsChecked">
+          <critter v-for="fish in fishes" v-bind:key="fish.Name" :critter="fish" :months="months"
+            :current-Month="currentMonth" :current-time="Number(currentTime.format('HH'))"
+            :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
+            :hour-Checked="hourChecked" :collected-checked="collectedChecked" :is-fish="true"
+            :collected="getCollected(fish.Name)" v-on:save-collected="saveCollected(fish.Name)">
+          </critter>
+        </div>
+        <div class="columnHeader" v-if="bugsChecked">Bugs</div>
+        <div class="bugs" v-if="bugsChecked">
 
-        <critter v-for="bug in bugs" v-bind:key="bug.Name" :critter="bug" :months="months" :current-Month="currentMonth"
-          :current-time="Number(currentTime.format('HH'))" :hemisphere="selectedHemisphere" :search="formatSearch"
-          :month-Checked="monthChecked" :hour-Checked="hourChecked" :is-fish="false" :collected="getCollected(bug.Name)"
-          v-on:save-collected="saveCollected(bug.Name)">
-        </critter>
+          <critter v-for="bug in bugs" v-bind:key="bug.Name" :critter="bug" :months="months"
+            :current-Month="currentMonth" :current-time="Number(currentTime.format('HH'))"
+            :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
+            :hour-Checked="hourChecked" :is-fish="false" :collected="getCollected(bug.Name)"
+            v-on:save-collected="saveCollected(bug.Name)">
+          </critter>
+        </div>
       </div>
     </div>
   </div>

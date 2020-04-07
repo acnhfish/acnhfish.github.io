@@ -7,6 +7,10 @@ html {
     font-family: Helvetica;
 }
 
+#app > * {
+    text-align: center;
+}
+
 .topControls {
     display: table;
     margin-left: auto;
@@ -25,9 +29,7 @@ html {
 
 
 .controlElement {
-    display:inline-block;
-    text-align: left;
-    vertical-align: middle;
+    display:block;
 }
 
 .dropdown {
