@@ -59,24 +59,24 @@
       <div class="columnHeader" v-if="fishChecked">Fish</div>
       <div class="fish" v-if="fishChecked">
 
-        <fish v-for="fish in fishes" v-bind:key="fish.Fish" :fish="fish" :months="months" :current-Month="currentMonth"
-          :current-time="Number(currentTime.format('HH'))" :hemisphere="selectedHemisphere" :search="formatSearch"
-          :month-Checked="monthChecked" :hour-Checked="hourChecked">
-        </fish>
+        <critter v-for="fish in fishes" v-bind:key="fish.Name" :critter="fish" :months="months"
+          :current-Month="currentMonth" :current-time="Number(currentTime.format('HH'))"
+          :hemisphere="selectedHemisphere" :search="formatSearch" :month-Checked="monthChecked"
+          :hour-Checked="hourChecked" :is-fish="true">
+        </critter>
       </div>
       <div class="columnHeader" v-if="bugsChecked">Bugs</div>
       <div class="bugs" v-if="bugsChecked">
 
-        <bug v-for="bug in bugs" v-bind:key="bug.Bug" :bug="bug" :months="months" :current-Month="currentMonth"
+        <critter v-for="bug in bugs" v-bind:key="bug.Name" :critter="bug" :months="months" :current-Month="currentMonth"
           :current-time="Number(currentTime.format('HH'))" :hemisphere="selectedHemisphere" :search="formatSearch"
-          :month-Checked="monthChecked" :hour-Checked="hourChecked">
-        </bug>
+          :month-Checked="monthChecked" :hour-Checked="hourChecked" :is-fish="false">
+        </critter>
       </div>
     </div>
   </div>
 
-  <script src="components/bug.js"></script>
-  <script src="components/fish.js"></script>
+  <script src="components/critter.js"></script>
 
   <script src="js/index.js"></script>
 </body>
