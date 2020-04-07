@@ -1737,6 +1737,10 @@ var vm = new Vue({
     realResetButtonClicked: function () {
       localStorage.clear()
       this.resetButton = false
+    },
+    escPressed: function () {
+      this.search = ""
+      document.getElementById("searchBox").blur()
     }
   
   },

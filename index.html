@@ -81,7 +81,8 @@
     </div>
     <div v-else>
       <div class="controlElement">
-        <input class="searchBox" type="text" placeholder="Search by name" v-model="search" />
+        <input id="searchBox" class="searchBox" type="text" placeholder="Search by name" v-on:keyup.esc="escPressed"
+          v-model="search" />
       </div>
       <div class="bugsandfish">
         <div class="columnHeader" v-if="fishChecked">Fish</div>
