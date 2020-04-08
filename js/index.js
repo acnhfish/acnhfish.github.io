@@ -21,7 +21,7 @@ var vm = new Vue({
       "Sep",
       "Oct",
       "Nov",
-      "Dec"
+      "Dec",
     ],
     currentMonth: month,
     currentHour: hour,
@@ -35,20 +35,25 @@ var vm = new Vue({
     filtersChecked: false,
     showOrHideFishText: "Hide fish",
     showOrHideBugsText: "Hide bugs",
-    resetButton: false
+    resetButton: false,
   },
   computed: {
-    formatSearch: function() {
+    formatSearch: function () {
       return this.search.toLowerCase();
     },
     selectedTime: {
       get: function () {
-        return Number(this.currentTime.format("HH"))
+        return Number(this.currentTime.format("HH"));
       },
       set: function (newValue) {
-        this.currentTime = moment().set({hour:newValue, minute:0, second:0,millisecond:0})
-      }
-    }
+        this.currentTime = moment().set({
+          hour: newValue,
+          minute: 0,
+          second: 0,
+          millisecond: 0,
+        });
+      },
+    },
   },
   methods: {
     changeHourFlag: function (event) {
@@ -75,80 +80,83 @@ var vm = new Vue({
     },
     changeHemisphere: function (event) {
       this.selectedHemisphere = !this.selectedHemisphere;
-      localStorage.setItem("selectedHemisphere", this.selectedHemisphere)
+      localStorage.setItem("selectedHemisphere", this.selectedHemisphere);
     },
     changeCollectedChecked: function () {
-      this.collectedChecked = !this.collectedChecked
+      this.collectedChecked = !this.collectedChecked;
     },
     updateTime: function () {
-      setIntervalID = setInterval(function () {
-        this.currentTime = moment()
-      }.bind(this), 1000)
-      
+      setIntervalID = setInterval(
+        function () {
+          this.currentTime = moment();
+        }.bind(this),
+        1000
+      );
     },
     autoTimeButton: function () {
-      this.autoTimeChecked = !this.autoTimeChecked
+      this.autoTimeChecked = !this.autoTimeChecked;
       if (!this.autoTimeChecked) {
-        clearInterval(setIntervalID)
+        clearInterval(setIntervalID);
       } else {
-        this.currentTime = moment()
-        this.updateTime()
+        this.currentTime = moment();
+        this.updateTime();
       }
     },
     getCollected: function (critter) {
       if (localStorage.getItem(critter) == "true") {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
     },
     saveCollected: function (critter) {
-      localStorage.setItem(critter, !this.getCollected(critter))
-      this.updateTime()
+      localStorage.setItem(critter, !this.getCollected(critter));
+      this.updateTime();
     },
     filtersCheck: function () {
-      this.filtersChecked = !this.filtersChecked
+      this.filtersChecked = !this.filtersChecked;
     },
     resetFilters: function () {
-      if (!this.autoTimeChecked) this.autoTimeButton()
-      if (!this.fishChecked) this.changeFishFlag()
-      if (!this.bugsChecked) this.changeBugsFlag()
-      if (!this.monthChecked) this.changeMonthFlag()
-      if (!this.hourChecked) this.changeHourFlag()
-      if (!this.collectedChecked) this.changeCollectedChecked()
+      if (!this.autoTimeChecked) this.autoTimeButton();
+      if (!this.fishChecked) this.changeFishFlag();
+      if (!this.bugsChecked) this.changeBugsFlag();
+      if (!this.monthChecked) this.changeMonthFlag();
+      if (!this.hourChecked) this.changeHourFlag();
+      if (!this.collectedChecked) this.changeCollectedChecked();
 
-      d = new Date()
-      this.currentMonth = d.getMonth()
+      d = new Date();
+      this.currentMonth = d.getMonth();
     },
     resetButtonClicked: function () {
-      this.resetButton = !this.resetButton
+      this.resetButton = !this.resetButton;
     },
     realResetButtonClicked: function () {
-      storedHemisphere = localStorage.getItem("selectedHemisphere")
-      localStorage.clear()
-      this.resetButton = false
+      storedHemisphere = localStorage.getItem("selectedHemisphere");
+      localStorage.clear();
+      this.resetButton = false;
       if (storedHemisphere == "true") {
-        this.selectedHemisphere = true
+        this.selectedHemisphere = true;
+        localStorage.setItem("selectedHemisphere", true);
       } else if (storedHemisphere == "false") {
-        this.selectedHemisphere = false
+        this.selectedHemisphere = false;
+        localStorage.setItem("selectedHemisphere", true);
       } else {
-        return
+        return;
       }
     },
     escPressed: function () {
-      this.search = ""
-      document.getElementById("searchBox").blur()
-    }
-  
+      this.search = "";
+      document.getElementById("searchBox").blur();
+    },
   },
   created: function () {
-    this.updateTime()
+    this.updateTime();
     if (localStorage.getItem("selectedHemisphere")) {
       if (localStorage.getItem("selectedHemisphere") == "true") {
-        this.selectedHemisphere = true
+        this.selectedHemisphere = true;
       } else {
-        this.selectedHemisphere = false
+        this.selectedHemisphere = false;
       }
     }
-  }
+  },
 });
