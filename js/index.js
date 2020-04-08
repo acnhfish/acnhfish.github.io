@@ -26,16 +26,16 @@ var vm = new Vue({
     currentMonth: month,
     currentHour: hour,
     currentTime: moment(),
-    bugsChecked: true,
-    fishChecked: true,
-    monthChecked: true,
-    hourChecked: true,
-    collectedChecked: true,
-    autoTimeChecked: true,
-    filtersChecked: false,
-    showOrHideFishText: "Hide fish",
-    showOrHideBugsText: "Hide bugs",
+    showBugsFlag: true,
+    showFishFlag: true,
+    filterByMonthFlag: true,
+    filterByHourFlag: true,
+    filterByCollectedFlag: true,
+    autoTimeFlag: true,
+    showFiltersFlag: false,
+    saveFiltersFlag: false,
     resetButton: false,
+    saveAutoTime: false,
   },
   computed: {
     formatSearch: function () {
@@ -57,33 +57,23 @@ var vm = new Vue({
   },
   methods: {
     changeHourFlag: function (event) {
-      this.hourChecked = !this.hourChecked;
+      this.filterByHourFlag = !this.filterByHourFlag;
     },
     changeMonthFlag: function (event) {
-      this.monthChecked = !this.monthChecked;
+      this.filterByMonthFlag = !this.filterByMonthFlag;
     },
     changeFishFlag: function (event) {
-      this.fishChecked = !this.fishChecked;
-      if (this.fishChecked) {
-        this.showOrHideFishText = "Hide fish";
-      } else {
-        this.showOrHideFishText = "Show fish";
-      }
+      this.showFishFlag = !this.showFishFlag;
     },
     changeBugsFlag: function (event) {
-      this.bugsChecked = !this.bugsChecked;
-      if (this.bugsChecked) {
-        this.showOrHideBugsText = "Hide bugs";
-      } else {
-        this.showOrHideBugsText = "Show bugs";
-      }
+      this.showBugsFlag = !this.showBugsFlag;
     },
     changeHemisphere: function (event) {
       this.selectedHemisphere = !this.selectedHemisphere;
       localStorage.setItem("selectedHemisphere", this.selectedHemisphere);
     },
-    changeCollectedChecked: function () {
-      this.collectedChecked = !this.collectedChecked;
+    changeCollectedFlag: function () {
+      this.filterByCollectedFlag = !this.filterByCollectedFlag;
     },
     updateTime: function () {
       setIntervalID = setInterval(
@@ -94,8 +84,8 @@ var vm = new Vue({
       );
     },
     autoTimeButton: function () {
-      this.autoTimeChecked = !this.autoTimeChecked;
-      if (!this.autoTimeChecked) {
+      this.autoTimeFlag = !this.autoTimeFlag;
+      if (!this.autoTimeFlag) {
         clearInterval(setIntervalID);
       } else {
         this.currentTime = moment();
@@ -113,16 +103,19 @@ var vm = new Vue({
       localStorage.setItem(critter, !this.getCollected(critter));
       this.updateTime();
     },
-    filtersCheck: function () {
-      this.filtersChecked = !this.filtersChecked;
+    changeShowFiltersFlag: function () {
+      this.showFiltersFlag = !this.showFiltersFlag;
+    },
+    changeSaveFiltersFlag: function () {
+      this.saveFiltersFlag = !this.saveFiltersFlag;
     },
     resetFilters: function () {
-      if (!this.autoTimeChecked) this.autoTimeButton();
-      if (!this.fishChecked) this.changeFishFlag();
-      if (!this.bugsChecked) this.changeBugsFlag();
-      if (!this.monthChecked) this.changeMonthFlag();
-      if (!this.hourChecked) this.changeHourFlag();
-      if (!this.collectedChecked) this.changeCollectedChecked();
+      if (!this.autoTimeFlag) this.autoTimeButton();
+      if (!this.showFishFlag) this.changeFishFlag();
+      if (!this.showBugsFlag) this.changeBugsFlag();
+      if (!this.filterByMonthFlag) this.changeMonthFlag();
+      if (!this.filterByHourFlag) this.changeHourFlag();
+      if (!this.filterByCollectedFlag) this.changeCollectedFlag();
 
       d = new Date();
       this.currentMonth = d.getMonth();
@@ -149,6 +142,7 @@ var vm = new Vue({
       document.getElementById("searchBox").blur();
     },
   },
+  watch: {},
   created: function () {
     this.updateTime();
     if (localStorage.getItem("selectedHemisphere")) {
