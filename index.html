@@ -186,6 +186,7 @@
               :search="formatSearch"
               :month-Checked="filterByMonthFlag"
               :hour-Checked="filterByHourFlag"
+              :collected-checked="filterByCollectedFlag"
               :is-fish="false"
               :collected="getCollected(bug.Name)"
               v-on:save-collected="saveCollected(bug.Name)"
