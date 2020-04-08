@@ -139,7 +139,7 @@ var vm = new Vue({
         localStorage.setItem("selectedHemisphere", true);
       } else if (storedHemisphere == "false") {
         this.selectedHemisphere = false;
-        localStorage.setItem("selectedHemisphere", true);
+        localStorage.setItem("selectedHemisphere", false);
       } else {
         return;
       }
