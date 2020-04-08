@@ -56,24 +56,37 @@ var vm = new Vue({
     },
   },
   methods: {
-    changeHourFlag: function (event) {
+    changeHourFlag: function () {
       this.filterByHourFlag = !this.filterByHourFlag;
+      if (saveFiltersFlag)
+        localStorage.setItem("filterByHourFlag", this.filterByHourFlag);
     },
-    changeMonthFlag: function (event) {
+    changeMonthFlag: function () {
       this.filterByMonthFlag = !this.filterByMonthFlag;
+      if (saveFiltersFlag)
+        localStorage.setItem("filterByMonthFlag", this.filterByMonthFlag);
     },
-    changeFishFlag: function (event) {
+    changeFishFlag: function () {
       this.showFishFlag = !this.showFishFlag;
+      if (saveFiltersFlag)
+        localStorage.setItem("showFishFlag", this.showFishFlag);
     },
-    changeBugsFlag: function (event) {
+    changeBugsFlag: function () {
       this.showBugsFlag = !this.showBugsFlag;
+      if (saveFiltersFlag)
+        localStorage.setItem("showBugsFlag", this.showBugsFlag);
     },
-    changeHemisphere: function (event) {
+    changeHemisphere: function () {
       this.selectedHemisphere = !this.selectedHemisphere;
       localStorage.setItem("selectedHemisphere", this.selectedHemisphere);
     },
     changeCollectedFlag: function () {
       this.filterByCollectedFlag = !this.filterByCollectedFlag;
+      if (saveFiltersFlag)
+        localStorage.setItem(
+          "filterByCollectedFlag",
+          this.filterByCollectedFlag
+        );
     },
     updateTime: function () {
       setIntervalID = setInterval(
@@ -116,9 +129,32 @@ var vm = new Vue({
       if (!this.filterByMonthFlag) this.changeMonthFlag();
       if (!this.filterByHourFlag) this.changeHourFlag();
       if (!this.filterByCollectedFlag) this.changeCollectedFlag();
-
+      if (this.saveFiltersFlag) this.changeSaveFiltersFlag();
       d = new Date();
       this.currentMonth = d.getMonth();
+    },
+    setFilters: function () {
+      localStorage.getItem("saveFiltersFlag") == "true"
+        ? (this.saveFiltersFlag = true)
+        : (this.saveFiltersFlag = false);
+      localStorage.getItem("autoTimeFlag") == "false"
+        ? (this.autoTimeFlag = false)
+        : (this.autoTimeFlag = true);
+      localStorage.getItem("showFishFlag") == "false"
+        ? (this.showFishFlag = false)
+        : (this.showFishFlag = true);
+      localStorage.getItem("showBugsFlag") == "false"
+        ? (this.showBugsFlag = false)
+        : (this.showBugsFlag = true);
+      localStorage.getItem("filterByMonthFlag") == "false"
+        ? (this.filterByMonthFlag = false)
+        : (this.filterByMonthFlag = true);
+      localStorage.getItem("filterByHourFlag") == "false"
+        ? (this.filterByHourFlag = false)
+        : (this.filterByHourFlag = true);
+      localStorage.getItem("filterByCollectedFlag") == "false"
+        ? (this.filterByCollectedFlag = false)
+        : (this.filterByCollectedFlag = true);
     },
     resetButtonClicked: function () {
       this.resetButton = !this.resetButton;
@@ -142,15 +178,26 @@ var vm = new Vue({
       document.getElementById("searchBox").blur();
     },
   },
-  watch: {},
+  watch: {
+    saveFiltersFlag: function (flag) {
+      localStorage.setItem("saveFiltersFlag", flag);
+      localStorage.setItem("autoTimeFlag", this.autoTimeFlag);
+      localStorage.setItem("showFishFlag", this.showFishFlag);
+      localStorage.setItem("showBugsFlag", this.showBugsFlag);
+      localStorage.setItem("filterByMonthFlag", this.filterByMonthFlag);
+      localStorage.setItem("filterByHourFlag", this.filterByHourFlag);
+      localStorage.setItem("filterByCollectedFlag", this.filterByCollectedFlag);
+    },
+  },
   created: function () {
     this.updateTime();
-    if (localStorage.getItem("selectedHemisphere")) {
-      if (localStorage.getItem("selectedHemisphere") == "true") {
-        this.selectedHemisphere = true;
-      } else {
-        this.selectedHemisphere = false;
-      }
+    if (localStorage.getItem("selectedHemisphere") == "true") {
+      this.selectedHemisphere = true;
+    } else if (localStorage.getItem("selectedHemisphere") == "false") {
+      this.selectedHemisphere = false;
+    }
+    if (localStorage.getItem("saveFiltersFlag") == "true") {
+      this.setFilters();
     }
   },
 });
