@@ -72,7 +72,7 @@ Vue.component("critter", {
               case 2:
                   return "Flying";
               case 3:
-                  return "Flying by light";
+                  return "Flying by lights";
               case 4:
                   return "Hitting rocks";
               case 5:
@@ -103,14 +103,16 @@ Vue.component("critter", {
                   return "Ponds and rivers";
               case 18:
                   return "Underground";
-              case 19:
-                  return "Palm trees"
+            case 19:
+              return "Palm trees";
+            case 20:
+              return "Flying by hybrid flowers"
           }
       },
     shadowType: function() {
         switch (this.critter.ShadowType) {
             case 0:
-                return "Smallest";
+                return "Tiny";
             case 1:
                 return "Small";
             case 2:
@@ -118,13 +120,15 @@ Vue.component("critter", {
             case 3:
                 return "Large";
             case 4:
-                return "Extra Large";
+                return "Very Large";
             case 5:
-                return "Largest";
+                return "Huge";
             case 6:
-                return "Largest with Fin";
+                return "Huge with Fin";
             case 7:
-                return "Narrow";
+            return "Long and thin";
+          case 8:
+            return "Large with fin";
         }
     },
     fishLocation: function() {
@@ -136,9 +140,9 @@ Vue.component("critter", {
         case 2:
           return "River";
         case 3:
-          return "Clifftop River";
+          return "River (Clifftop)";
         case 4:
-          return "River mouth";
+          return "River (mouth)";
         case 5:
           return "Sea";
         case 6:
