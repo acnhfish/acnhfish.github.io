@@ -58,22 +58,22 @@ var vm = new Vue({
   methods: {
     changeHourFlag: function () {
       this.filterByHourFlag = !this.filterByHourFlag;
-      if (saveFiltersFlag)
+      if (this.saveFiltersFlag)
         localStorage.setItem("filterByHourFlag", this.filterByHourFlag);
     },
     changeMonthFlag: function () {
       this.filterByMonthFlag = !this.filterByMonthFlag;
-      if (saveFiltersFlag)
+      if (this.saveFiltersFlag)
         localStorage.setItem("filterByMonthFlag", this.filterByMonthFlag);
     },
     changeFishFlag: function () {
       this.showFishFlag = !this.showFishFlag;
-      if (saveFiltersFlag)
+      if (this.saveFiltersFlag)
         localStorage.setItem("showFishFlag", this.showFishFlag);
     },
     changeBugsFlag: function () {
       this.showBugsFlag = !this.showBugsFlag;
-      if (saveFiltersFlag)
+      if (this.saveFiltersFlag)
         localStorage.setItem("showBugsFlag", this.showBugsFlag);
     },
     changeHemisphere: function () {
@@ -82,7 +82,7 @@ var vm = new Vue({
     },
     changeCollectedFlag: function () {
       this.filterByCollectedFlag = !this.filterByCollectedFlag;
-      if (saveFiltersFlag)
+      if (this.saveFiltersFlag)
         localStorage.setItem(
           "filterByCollectedFlag",
           this.filterByCollectedFlag
