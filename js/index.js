@@ -1641,7 +1641,6 @@ var vm = new Vue({
     filtersChecked: false,
     showOrHideFishText: "Hide fish",
     showOrHideBugsText: "Hide bugs",
-    hemisphereButtonText: "Switch to southern hemisphere",
     resetButton: false
   },
   computed: {
@@ -1682,11 +1681,7 @@ var vm = new Vue({
     },
     changeHemisphere: function (event) {
       this.selectedHemisphere = !this.selectedHemisphere;
-      if (this.selectedHemisphere) {
-        this.hemisphereButtonText = "Switch to southern hemisphere";
-      } else {
-        this.hemisphereButtonText = "Switch to northern hemisphere";
-      }
+      localStorage.setItem("selectedHemisphere", this.selectedHemisphere)
     },
     changeCollectedChecked: function () {
       this.collectedChecked = !this.collectedChecked
@@ -1735,8 +1730,16 @@ var vm = new Vue({
       this.resetButton = !this.resetButton
     },
     realResetButtonClicked: function () {
+      storedHemisphere = localStorage.getItem("selectedHemisphere")
       localStorage.clear()
       this.resetButton = false
+      if (storedHemisphere == "true") {
+        this.selectedHemisphere = true
+      } else if (storedHemisphere == "false") {
+        this.selectedHemisphere = false
+      } else {
+        return
+      }
     },
     escPressed: function () {
       this.search = ""
@@ -1746,5 +1749,12 @@ var vm = new Vue({
   },
   created: function () {
     this.updateTime()
+    if (localStorage.getItem("selectedHemisphere")) {
+      if (localStorage.getItem("selectedHemisphere") == "true") {
+        this.selectedHemisphere = true
+      } else {
+        this.selectedHemisphere = false
+      }
+    }
   }
 });
