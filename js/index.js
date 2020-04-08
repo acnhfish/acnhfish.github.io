@@ -52,6 +52,8 @@ var vm = new Vue({
           second: 0,
           millisecond: 0,
         });
+        if (this.saveFiltersFlag)
+          localStorage.setItem("selectedTime", newValue);
       },
     },
   },
@@ -96,13 +98,18 @@ var vm = new Vue({
         1000
       );
     },
-    autoTimeButton: function () {
-      this.autoTimeFlag = !this.autoTimeFlag;
+    changeAutoTimeFlag: function (flip) {
+      if (flip) {
+        this.autoTimeFlag = !this.autoTimeFlag;
+      }
       if (!this.autoTimeFlag) {
         clearInterval(setIntervalID);
       } else {
         this.currentTime = moment();
         this.updateTime();
+      }
+      if (this.saveFiltersFlag) {
+        localStorage.setItem("autoTimeFlag", this.autoTimeFlag);
       }
     },
     getCollected: function (critter) {
@@ -123,7 +130,7 @@ var vm = new Vue({
       this.saveFiltersFlag = !this.saveFiltersFlag;
     },
     resetFilters: function () {
-      if (!this.autoTimeFlag) this.autoTimeButton();
+      if (!this.autoTimeFlag) this.changeAutoTimeFlag(true);
       if (!this.showFishFlag) this.changeFishFlag();
       if (!this.showBugsFlag) this.changeBugsFlag();
       if (!this.filterByMonthFlag) this.changeMonthFlag();
@@ -140,6 +147,12 @@ var vm = new Vue({
       localStorage.getItem("autoTimeFlag") == "false"
         ? (this.autoTimeFlag = false)
         : (this.autoTimeFlag = true);
+      localStorage.getItem("selectedTime")
+        ? (this.selectedTime = localStorage.getItem("selectedTime"))
+        : null;
+      localStorage.getItem("currentMonth")
+        ? (this.currentMonth = localStorage.getItem("currentMonth"))
+        : null;
       localStorage.getItem("showFishFlag") == "false"
         ? (this.showFishFlag = false)
         : (this.showFishFlag = true);
@@ -182,11 +195,16 @@ var vm = new Vue({
     saveFiltersFlag: function (flag) {
       localStorage.setItem("saveFiltersFlag", flag);
       localStorage.setItem("autoTimeFlag", this.autoTimeFlag);
+      localStorage.setItem("selectedTime", this.selectedTime);
+      localStorage.setItem("currentMonth", this.currentMonth);
       localStorage.setItem("showFishFlag", this.showFishFlag);
       localStorage.setItem("showBugsFlag", this.showBugsFlag);
       localStorage.setItem("filterByMonthFlag", this.filterByMonthFlag);
       localStorage.setItem("filterByHourFlag", this.filterByHourFlag);
       localStorage.setItem("filterByCollectedFlag", this.filterByCollectedFlag);
+    },
+    currentMonth: function (month) {
+      if (this.saveFiltersFlag) localStorage.setItem("currentMonth", month);
     },
   },
   created: function () {
@@ -198,6 +216,7 @@ var vm = new Vue({
     }
     if (localStorage.getItem("saveFiltersFlag") == "true") {
       this.setFilters();
+      this.changeAutoTimeFlag(false);
     }
   },
 });

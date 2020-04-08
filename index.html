@@ -32,23 +32,22 @@
         </button>
       </div>
       <div class="topControls" v-if="showFiltersFlag">
-        <span v-once>&#x2193;(this is always saved)&#x2193;</span>
         <div class="controlElement">
           <button v-on:click="changeHemisphere" class="greenButton">
             Hemisphere: {{ selectedHemisphere ? "Northern" : "Southern" }}
           </button>
         </div>
-
+        <span v-once>&#x2191;(this is always saved)&#x2191;</span>
         <div class="controlElement">
           <button
-            v-on:click="autoTimeButton"
+            v-on:click="changeAutoTimeFlag"
             v-bind:class="{greenButton: autoTimeFlag, redButton: !autoTimeFlag}"
           >
             Automatic time: {{ autoTimeFlag ? "On" : "Off" }}
           </button>
         </div>
         <div class="controlElement">
-          <span v-if="!autoTimeFlag">Select time:</span>
+          &#xa0;&#xa0;<span v-if="!autoTimeFlag">Select time:</span>
           <select class="dropdown" v-model="selectedTime" v-if="!autoTimeFlag">
             <option v-for="hour in 24" :value="hour-1"
               >{{ ('0' + (hour-1)).slice(-2) }}:00</option
