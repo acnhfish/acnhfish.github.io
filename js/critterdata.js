@@ -6,7 +6,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Ant",
@@ -15,7 +15,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Atlas Moth",
@@ -24,7 +24,7 @@ bugs = [
     StartTime: 19,
     EndTime: 4,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Bagworm",
@@ -33,7 +33,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Banded Dragonfly",
@@ -42,7 +42,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Bell Cricket",
@@ -51,7 +51,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
-    SouthMonths: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Blue Weevil Beetle",
@@ -60,7 +60,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Brown Cicada",
@@ -69,7 +69,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Centipede",
@@ -78,7 +78,7 @@ bugs = [
     StartTime: 16,
     EndTime: 23,
     NorthMonths: [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1],
-    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Cicada Shell",
@@ -87,7 +87,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Citrus Long-horned Beetle",
@@ -96,7 +96,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Common Bluebottle",
@@ -105,7 +105,7 @@ bugs = [
     StartTime: 4,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Common Butterfly",
@@ -114,7 +114,7 @@ bugs = [
     StartTime: 4,
     EndTime: 19,
     NorthMonths: [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1],
-    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Cricket",
@@ -123,7 +123,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
-    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Cyclommatus Stag",
@@ -132,7 +132,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Damselfly",
@@ -141,7 +141,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
-    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
   },
   {
     Name: "Darner Dragonfly",
@@ -150,7 +150,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Diving Beetle",
@@ -159,7 +159,7 @@ bugs = [
     StartTime: 8,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Drone Beetle",
@@ -168,7 +168,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Dung Beetle",
@@ -177,7 +177,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
   },
   {
     Name: "Earth-boring Dung Beetle",
@@ -186,7 +186,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Emperor Butterfly",
@@ -195,7 +195,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1],
-    SouthMonths: [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1],
   },
   {
     Name: "Evening Cicada",
@@ -204,7 +204,7 @@ bugs = [
     StartTime: [4, 16],
     EndTime: [8, 19],
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Firefly",
@@ -213,7 +213,7 @@ bugs = [
     StartTime: 19,
     EndTime: 4,
     NorthMonths: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-    SouthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Flea",
@@ -222,7 +222,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Fly",
@@ -231,7 +231,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Giant Cicada",
@@ -240,7 +240,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Giant Stag",
@@ -249,7 +249,7 @@ bugs = [
     StartTime: 23,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Giant Water Bug",
@@ -258,7 +258,7 @@ bugs = [
     StartTime: 19,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Giraffe Stag",
@@ -267,7 +267,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Golden Stag",
@@ -276,7 +276,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Goliath Beetle",
@@ -285,7 +285,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Grasshopper",
@@ -294,7 +294,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Great Purple Emperor",
@@ -303,7 +303,7 @@ bugs = [
     StartTime: 4,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Hermit Crab",
@@ -312,7 +312,7 @@ bugs = [
     StartTime: 19,
     EndTime: 8,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Honeybee",
@@ -321,7 +321,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0],
-    SouthMonths: [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Horned Atlas",
@@ -330,7 +330,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Horned Dynastid",
@@ -339,7 +339,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Horned Elephant",
@@ -348,7 +348,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Horned Herucles",
@@ -357,7 +357,7 @@ bugs = [
     StartTime: 17,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Jewel Beetle",
@@ -366,7 +366,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Ladybug",
@@ -375,7 +375,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0],
-    SouthMonths: [0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Long Locust",
@@ -384,7 +384,7 @@ bugs = [
     StartTime: 8,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Madagascan Sunset Moth",
@@ -393,7 +393,7 @@ bugs = [
     StartTime: 8,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Man-faced Stink Bug",
@@ -402,7 +402,7 @@ bugs = [
     StartTime: 19,
     EndTime: 8,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Mantis",
@@ -411,7 +411,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Migratory Locust",
@@ -420,7 +420,7 @@ bugs = [
     StartTime: 8,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-    SouthMonths: [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Miyama Stag",
@@ -429,7 +429,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Mole Cricket",
@@ -438,7 +438,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1],
-    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0]
+    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
   },
   {
     Name: "Monach Butterfly",
@@ -447,7 +447,7 @@ bugs = [
     StartTime: 4,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
-    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Mosquito",
@@ -456,7 +456,7 @@ bugs = [
     StartTime: 17,
     EndTime: 4,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Moth",
@@ -465,7 +465,7 @@ bugs = [
     StartTime: 19,
     EndTime: 4,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Orchid Mantis",
@@ -474,7 +474,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Paper Kite Butterfly",
@@ -483,7 +483,7 @@ bugs = [
     StartTime: 8,
     EndTime: 19,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Peacock Butterfly",
@@ -492,7 +492,7 @@ bugs = [
     StartTime: 4,
     EndTime: 19,
     NorthMonths: [0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0],
-    SouthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Pill Bug",
@@ -501,7 +501,7 @@ bugs = [
     StartTime: 23,
     EndTime: 16,
     NorthMonths: [1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1],
-    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Pondskater",
@@ -510,7 +510,7 @@ bugs = [
     StartTime: 8,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Queen Alexandra's Birdwing",
@@ -519,7 +519,7 @@ bugs = [
     StartTime: 8,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Rainbow Stag",
@@ -528,7 +528,7 @@ bugs = [
     StartTime: 19,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Raja Brooke's Birdwing",
@@ -537,7 +537,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1],
-    SouthMonths: [1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1],
   },
   {
     Name: "Red Dragonfly",
@@ -546,7 +546,7 @@ bugs = [
     StartTime: 8,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
-    SouthMonths: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Rice Grasshopper",
@@ -555,7 +555,7 @@ bugs = [
     StartTime: 8,
     EndTime: 19,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-    SouthMonths: [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Robust Cicada",
@@ -564,7 +564,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Rosalia Batesi Beetle",
@@ -573,7 +573,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Saw Stag",
@@ -582,7 +582,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Scarab Beetle",
@@ -591,7 +591,7 @@ bugs = [
     StartTime: 23,
     EndTime: 8,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Scorpion",
@@ -600,7 +600,7 @@ bugs = [
     StartTime: 19,
     EndTime: 4,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Snail",
@@ -609,7 +609,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Spider",
@@ -618,7 +618,7 @@ bugs = [
     StartTime: 19,
     EndTime: 8,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Stinkbug",
@@ -627,7 +627,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Tarantula",
@@ -636,7 +636,7 @@ bugs = [
     StartTime: 19,
     EndTime: 4,
     NorthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
-    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
   },
   {
     Name: "Tiger Beetle",
@@ -645,7 +645,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1],
   },
   {
     Name: "Tiger Butterfly",
@@ -654,7 +654,7 @@ bugs = [
     StartTime: 4,
     EndTime: 19,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Violin Beetle",
@@ -663,7 +663,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0],
-    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Walker Cicada",
@@ -672,7 +672,7 @@ bugs = [
     StartTime: 8,
     EndTime: 17,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
-    SouthMonths: [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Walking Leaf",
@@ -681,7 +681,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Walking Stick",
@@ -690,7 +690,7 @@ bugs = [
     StartTime: [4, 17],
     EndTime: [8, 19],
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Wasp",
@@ -699,7 +699,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Wharf Roach",
@@ -708,7 +708,7 @@ bugs = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Yellow Butterfly",
@@ -717,8 +717,8 @@ bugs = [
     StartTime: 4,
     EndTime: 19,
     NorthMonths: [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0],
-    SouthMonths: [0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1]
-  }
+    SouthMonths: [0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1],
+  },
 ];
 
 fish = [
@@ -731,7 +731,7 @@ fish = [
     StartTime: 4,
     EndTime: 21,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Angelfish",
@@ -742,7 +742,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Arapaima",
@@ -753,7 +753,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Arowana",
@@ -764,7 +764,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Barred Knifejaw",
@@ -775,7 +775,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Barreleye",
@@ -786,7 +786,7 @@ fish = [
     StartTime: 21,
     EndTime: 4,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Betta",
@@ -797,7 +797,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Bitterling",
@@ -808,7 +808,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
-    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
   },
   {
     Name: "Black Bass",
@@ -819,7 +819,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Blowfish",
@@ -830,7 +830,7 @@ fish = [
     StartTime: 18,
     EndTime: 4,
     NorthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
-    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
   },
   {
     Name: "Blue Marlin",
@@ -841,7 +841,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1],
-    SouthMonths: [1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+    SouthMonths: [1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0],
   },
   {
     Name: "Bluegill",
@@ -852,7 +852,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Butterfly Fish",
@@ -863,7 +863,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Carp",
@@ -874,7 +874,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Catfish",
@@ -885,7 +885,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Char",
@@ -896,7 +896,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0],
-    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Cherry Salmon",
@@ -907,7 +907,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0],
-    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Clown Fish",
@@ -918,7 +918,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Coelacanth",
@@ -929,7 +929,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Crawfish",
@@ -940,7 +940,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Crucian Carp",
@@ -951,7 +951,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Dab",
@@ -962,7 +962,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
-    SouthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+    SouthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
   },
   {
     Name: "Dace",
@@ -973,7 +973,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Dorado",
@@ -984,7 +984,7 @@ fish = [
     StartTime: 4,
     EndTime: 21,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Football Fish",
@@ -995,7 +995,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
-    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
   },
   {
     Name: "Freshwater Goby",
@@ -1006,7 +1006,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Frog",
@@ -1017,7 +1017,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Gar",
@@ -1028,7 +1028,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Giant Snakehead",
@@ -1039,7 +1039,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Giant Trevally",
@@ -1050,7 +1050,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Golden Trout",
@@ -1061,7 +1061,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0],
-    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0]
+    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0],
   },
   {
     Name: "Goldfish",
@@ -1072,7 +1072,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Great White Shark",
@@ -1083,7 +1083,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Guppy",
@@ -1094,7 +1094,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Hammerhead Shark",
@@ -1105,7 +1105,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Horse Mackerel",
@@ -1116,7 +1116,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Killifish",
@@ -1127,7 +1127,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "King Salmon",
@@ -1138,7 +1138,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
-    SouthMonths: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Koi",
@@ -1149,7 +1149,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Loach",
@@ -1160,7 +1160,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
-    SouthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0]
+    SouthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
   },
   {
     Name: "Mahi-mahi",
@@ -1171,7 +1171,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Mitten Crab",
@@ -1182,7 +1182,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
-    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Moray Eel",
@@ -1193,7 +1193,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0],
-    SouthMonths: [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Napoleonfish",
@@ -1204,7 +1204,7 @@ fish = [
     StartTime: 4,
     EndTime: 21,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Neon Tetra",
@@ -1215,7 +1215,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Nibble Fish",
@@ -1226,7 +1226,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Oarfish",
@@ -1237,7 +1237,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1],
-    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0]
+    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0],
   },
   {
     Name: "Ocean Sunfish",
@@ -1248,7 +1248,7 @@ fish = [
     StartTime: 4,
     EndTime: 21,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Olive Flounder",
@@ -1259,7 +1259,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Pale Chub",
@@ -1270,7 +1270,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Pike",
@@ -1281,7 +1281,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-    SouthMonths: [0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Piranha",
@@ -1292,7 +1292,7 @@ fish = [
     StartTime: [9, 21],
     EndTime: [16, 4],
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Pond Smelt",
@@ -1303,7 +1303,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
   },
   {
     Name: "Pop-eyed Goldfish",
@@ -1314,7 +1314,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Puffer Fish",
@@ -1325,7 +1325,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Rainbowfish",
@@ -1336,7 +1336,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
   },
   {
     Name: "Ranchu Goldfish",
@@ -1347,7 +1347,7 @@ fish = [
     StartTime: 9,
     EndTime: 16,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Ray",
@@ -1358,7 +1358,7 @@ fish = [
     StartTime: 4,
     EndTime: 21,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-    SouthMonths: [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Red Snapper",
@@ -1369,7 +1369,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Ribbon Eel",
@@ -1380,7 +1380,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Saddled Bichir",
@@ -1391,7 +1391,7 @@ fish = [
     StartTime: 21,
     EndTime: 4,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Salmon",
@@ -1402,7 +1402,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
-    SouthMonths: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Saw Shark",
@@ -1413,7 +1413,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Sea Bass",
@@ -1424,7 +1424,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Sea Butterfly",
@@ -1435,7 +1435,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
   },
   {
     Name: "Sea Horse",
@@ -1446,18 +1446,18 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Snapping Turtle",
     id: 13,
     Location: 2,
-    ShadowType: 4,
+    ShadowType: 2,
     Value: 5000,
     StartTime: 21,
     EndTime: 4,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Soft-shelled Turtle",
@@ -1468,7 +1468,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
-    SouthMonths: [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Squid",
@@ -1479,7 +1479,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1],
-    SouthMonths: [1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1]
+    SouthMonths: [1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1],
   },
   {
     Name: "Stringfish",
@@ -1490,7 +1490,7 @@ fish = [
     StartTime: 16,
     EndTime: 9,
     NorthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
   },
   {
     Name: "Sturgeon",
@@ -1501,7 +1501,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+    SouthMonths: [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
   },
   {
     Name: "Suckerfish",
@@ -1512,7 +1512,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Surgeonfish",
@@ -1523,7 +1523,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
   },
   {
     Name: "Sweetfish",
@@ -1534,7 +1534,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     Name: "Tadpole",
@@ -1545,7 +1545,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0],
-    SouthMonths: [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+    SouthMonths: [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1],
   },
   {
     Name: "Tilapia",
@@ -1556,7 +1556,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0],
-    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Tuna",
@@ -1567,7 +1567,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
-    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+    SouthMonths: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
   },
   {
     Name: "Whale Shark",
@@ -1578,7 +1578,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
-    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    SouthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
     Name: "Yellow Perch",
@@ -1589,7 +1589,7 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1],
-    SouthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+    SouthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
   },
   {
     Name: "Zebra Turkeyfish",
@@ -1600,6 +1600,6 @@ fish = [
     StartTime: 0,
     EndTime: 0,
     NorthMonths: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1]
-  }
+    SouthMonths: [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
+  },
 ];
